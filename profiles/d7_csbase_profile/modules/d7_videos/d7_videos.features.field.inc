@@ -10,7 +10,77 @@
 function d7_videos_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'node-video-field_video_embed'
+  // Exported field: 'node-video-field_project_type'.
+  $fields['node-video-field_project_type'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_project_type',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'project_type',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'video',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => 3,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_project_type',
+      'label' => 'Project Type',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'multiselect',
+        'settings' => array(),
+        'type' => 'multiselect',
+        'weight' => '3',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-video-field_video_embed'.
   $fields['node-video-field_video_embed'] = array(
     'field_config' => array(
       'active' => '1',
@@ -24,6 +94,7 @@ function d7_videos_field_default_fields() {
           0 => 'fid',
         ),
       ),
+      'locked' => '0',
       'module' => 'mediafield',
       'settings' => array(),
       'translatable' => '0',
@@ -67,24 +138,23 @@ function d7_videos_field_default_fields() {
         'module' => 'media',
         'settings' => array(
           'allowed_schemes' => array(
-            'private' => 0,
             'public' => 0,
             'vimeo' => 'vimeo',
-            'youtube' => 'youtube',
+            'youtube' => 0,
           ),
           'allowed_types' => array(
             'audio' => 0,
-            'default' => 0,
+            'document' => 0,
             'image' => 0,
             'video' => 'video',
           ),
           'browser_plugins' => array(
-            'library' => 0,
             'media_default--media_browser_1' => 'media_default--media_browser_1',
+            'media_default--media_browser_my_files' => 0,
             'media_internet' => 'media_internet',
             'upload' => 0,
+            'youtube' => 0,
           ),
-          'file_extensions' => 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp mp3 mov m4v mp4 mpeg avi ogg wmv ico',
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
@@ -93,7 +163,7 @@ function d7_videos_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-video-field_video_sort'
+  // Exported field: 'node-video-field_video_sort'.
   $fields['node-video-field_video_sort'] = array(
     'field_config' => array(
       'active' => '1',
@@ -107,6 +177,7 @@ function d7_videos_field_default_fields() {
           0 => 'value',
         ),
       ),
+      'locked' => '0',
       'module' => 'list',
       'settings' => array(
         'allowed_values' => array(
@@ -161,7 +232,7 @@ function d7_videos_field_default_fields() {
       'bundle' => 'video',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '<em>Sort albums in the order you\'d like them to appear (e.g., -10 shown earlier than -9).</em>',
+      'description' => '<em>Sort projects in the order you\'d like them to appear (e.g., -10 shown earlier than -9).</em>',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -178,7 +249,7 @@ function d7_videos_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_video_sort',
-      'label' => 'Video Sort Order',
+      'label' => 'Project Sort Order',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -195,9 +266,10 @@ function d7_videos_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('<em>Sort albums in the order you\'d like them to appear (e.g., -10 shown earlier than -9).</em>');
+  t('<em>Sort projects in the order you\'d like them to appear (e.g., -10 shown earlier than -9).</em>');
+  t('Project Sort Order');
+  t('Project Type');
   t('Video Embed');
-  t('Video Sort Order');
 
   return $fields;
 }

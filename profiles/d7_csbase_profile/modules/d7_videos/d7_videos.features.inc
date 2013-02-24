@@ -18,10 +18,7 @@ function d7_videos_ctools_plugin_api() {
  * Implements hook_views_api().
  */
 function d7_videos_views_api() {
-  list($module, $api) = func_get_args();
-  if ($module == "views" && $api == "views_default") {
-    return array("version" => "3.0");
-  }
+  return array("api" => "3.0");
 }
 
 /**
@@ -30,11 +27,11 @@ function d7_videos_views_api() {
 function d7_videos_node_info() {
   $items = array(
     'video' => array(
-      'name' => t('Video'),
+      'name' => t('Project'),
       'base' => 'node_content',
-      'description' => t('Add embedded videos to your website.'),
+      'description' => t('Add a new <em>Project</em> to your website to be displayed in Our Work sections.'),
       'has_title' => '1',
-      'title_label' => t('Video Title'),
+      'title_label' => t('Project Title'),
       'help' => '',
     ),
   );
