@@ -1,0 +1,1 @@
+(function(e){e(function(){var t=e(".isotope");t.isotope({});e(".filter a").click(function(){var n=e(this).attr("data-filter");t.isotope({filter:n});return!1})})})(jQuery);

@@ -1,0 +1,132 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "grid-settings";
+@import "defaults";
+
+/* ------------------------------------
+ Header
+-------------------------------------*/
+.header-region {
+  > div {
+    clear: both;
+    box-shadow: 0 0 9px #1f1f1f;
+    min-height: 500px;
+    position: relative;
+  }
+  .views-field-nothing a {
+    @include sprite(-630px 0);
+    padding-top: 176px;
+    width: 142px;
+    position: absolute;
+    left: 50%;
+    margin-left: -68px;
+    top: 50%;
+    margin-top: -123px;
+    &:hover {
+      opacity: .9;
+    }
+  }
+}
+h1 {
+  float: left;
+  font-size: 3em;
+  margin-right:5%;
+  width: 38%;
+}
+article {
+  float: left;
+  width: 57%;
+}
+
+
+/* ------------------------------------
+ Content
+-------------------------------------*/
+.page {
+  margin: 3% 0;
+}
+#main-content {
+  background-color: transparent;
+  color: #fff;
+  padding:0;
+}
+.block-views-team-block-1  {
+  background-color: #e4e4e4;
+  box-shadow: 0 0 9px #1f1f1f;
+  clear: both;
+  color: #222;
+  margin: 8% 0;
+  float: left;
+  position: relative;
+  &:after {
+    content: "";
+    border: 123px solid #4f4f4f;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    z-index: -2;
+    opacity: .6;
+    position: absolute;
+    bottom: -246px;
+    margin-left: -129px;
+    left: 50%;
+  }
+  h2 {
+    margin: 0;
+    padding-top: 30px;
+    a {
+      color: $blue;
+    }
+  }
+  h3 {
+    color: #595959;
+    margin-bottom: 19px;
+  }
+}
+.view-id-team:after {
+    content: "";
+    border: 75px solid #fff;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    position: absolute;
+    bottom: -150px;
+    left: 50%;
+    margin-left: -80px;
+    z-index: -1;
+    opacity: .7;
+}
+.views-field-field-staff-image {
+  float: left;
+  margin-right:3%;
+  width: 49%;
+  img {
+    display: block;
+  }
+}
+.views-field-body p {
+  font-size: .8em;
+  line-height: 1.5em;
+}
+.views-field-view-node {
+  margin: 15px 0;
+}
+.views-field-field-team-category ol {
+  li {
+      color: #fff;
+      display: inline-block;
+      background-color: #bebebe;
+      padding: 2px 12px;
+      margin-right: 12px;
+      @include transform(skew(-10deg, 0));
+      span {
+        display: inline-block;
+        @include transform(skew(10deg, 0));
+      }
+  }
+}
+.block-views-videos-block-2 {
+  clear: both;
+}
+
+

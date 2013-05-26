@@ -1,0 +1,270 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "grid-settings";
+@import "defaults";
+
+/* Font Usage
+font-family: 'Lato', sans-serif;
+font-family: 'Gentium Basic', serif;
+font-family: 'Merriweather', serif;
+*/
+
+/* ------------------------------------
+ General defaults
+-------------------------------------*/
+html {
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border: 620px solid #7f7f7f;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    opacity: .6;
+    z-index: -1;
+    margin-left: -620px;
+  }
+}
+body {
+  background: url(../images/bg.jpg) repeat-y scroll 0 0 #000;
+  color: #adadad;
+  font: 1em/1.3em Arial, sans-serif;
+  font-size: 100%;
+  line-height: 2em;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border: 804px solid #4f4f4f;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    z-index: -1;
+    opacity: .6;
+    margin-left:-804px;
+  }
+}
+/* - Typography Basics - from Gridless http://thatcoolguy.github.com/gridless-boilerplate/ */
+h1, h2, h3, h4, h5, h6 {
+  color: $blue;
+  font-family: 'Nilland', serif;
+  font-size: 1em;
+}
+h1 {
+  font-size: 4.25em; /* 68px */
+  line-height: 1.1471em;
+  margin: 0 0 0.3824em;
+}
+
+h2 {
+  font-size: 2.625em; /* 42px */
+  line-height: 1.2381em;
+  margin: 0 0 0.619em;
+}
+
+h3 {
+  font-size: 1.625em; /* 26px */
+  line-height: 1em;
+  margin: 0 0 1em;
+}
+/* end typography basics */
+
+/* responsive images, videos */
+img, object, video {
+  height: auto;
+  max-width: 100%;
+}
+/* Overrides for Media module to make fitVids work */
+.media-youtube-outer-wrapper, .media-youtube-preview-wrapper, .media-vimeo-outer-wrapper, .media-vimeo-preview-wrapper {
+    height: auto !important;
+    width: auto !important;
+}
+/* end typography basics */
+
+a {
+  color: #000;
+}
+.wrap, .footer-container {
+  @include outer-container;
+}
+header, .page, footer {
+  @include span-columns(16);
+}
+
+/* ------------------------------------
+ Drupal defaults
+-------------------------------------*/
+.region-aside .block {
+    clear: both;
+    margin-bottom: 20px;
+}
+.view-content ul, .view-content ol {
+  margin: 0;
+  padding: 0;
+}
+.item-list ul li.views-row, .views-row {
+  list-style: none;
+  margin:0;
+  padding: 0;
+  position: relative;
+}
+/* tabs */
+ul.primary {
+  height: 22px;
+  li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    a {
+      border-radius: 3px 3px 0 0;
+      padding: 7px 7px 5px;
+    }
+  }
+}
+/* Node */
+.node .field li {
+  list-style: disc;
+  margin: .5% 3%;
+}
+/* Tables */
+td, th {
+  padding: 2%;
+}
+/* Forms */
+form small, form .description {
+  color: #5f5f5f;
+}
+.required {
+  color: #000;
+}
+input[type="text"], input[type="password"] {
+  border: 1px solid #7a7b7b;
+  padding: 10px 34px 10px 10px;
+  font-size: 1em;
+  font-weight: bold;
+  @include box-shadow(0 1px 2px rgba(0, 0, 0, 0.35) inset);
+  margin: 10px 0;
+}
+input[type="submit"] {
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.page input[type="submit"] {
+  @include btn;
+  padding: .75% 1.5%;
+}
+/* User Login */
+#user-login {
+  div {
+    margin: 15px 0;
+  }
+  label {
+    display: block;
+  }
+}
+.views-field-view-node a {
+  @include btn;
+}
+
+/* ------------------------------------
+ Header
+-------------------------------------*/
+
+/* Nav gradient from #30a13f to #2a8c37; */
+header {
+  figure {
+    float: left;
+    margin: 2% 0;
+    a {
+      @include sprite(0 -34px);
+      width: 363px;
+      padding-top: 147px;
+    }
+  }
+}
+.header-region {
+  nav {
+    display: inline-block;
+    margin: 6% 1%;
+    float: right;
+    h2 {
+      display: none;
+    }
+    li {
+      display: inline-block;
+      float: left;
+    }
+    > ul a {
+      background-color:#d3d3d3;
+      color: #545454;
+      display: block;
+      padding: 9px 25px;
+      border: 1px solid #b9b9b9;
+      &:hover, &.active {
+        @include linear-gradient(#30a13f, #2a8c37);
+        border-color:#3b9147;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+/* ------------------------------------
+ Content
+-------------------------------------*/
+#main-content {
+  background-color:#fff;
+  color: #000;
+  padding:1em 1.5em;
+}
+
+/* ------------------------------------
+ Footer
+-------------------------------------*/
+
+.footer-wrap {
+  clear: both;
+  background:url(../images/grass.png) repeat-x scroll bottom center;
+  min-height: 350px;
+  width: 100%;
+}
+footer {
+  font-size: .8em;
+  position: relative;
+  > * {
+    display: inline-block;
+    float: left;
+    width: 24%;
+  }
+  h2 {
+    font: 1.3em/2em Arial, sans-serif;
+  }
+  a, a.active {
+    color: #adadad;
+  }
+  li a {
+    text-transform: uppercase;
+  }
+  .mootv {
+    @include sprite(-362px 0);
+    display: block;
+    height: 0;
+    overflow: hidden;
+    padding-top: 210px;
+    width: 278px;
+    position: absolute;
+    bottom: -117px;
+    right: -4px;
+    z-index: -1;
+  }
+}
+
