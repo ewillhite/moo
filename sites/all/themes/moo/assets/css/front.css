@@ -44,7 +44,7 @@
 
 h1 {
   float: left;
-  font-size: 3em;
+  font-size: 2.7em;
   margin-right: 5%;
   width: 38%; }
 
@@ -56,7 +56,7 @@ article {
  Content
 -------------------------------------*/
 .page {
-  margin: 3% 0; }
+  margin: 11% 0; }
 
 #main-content {
   background-color: transparent;
@@ -120,9 +120,9 @@ article {
   margin: 15px 0; }
 
 .views-field-field-team-category ol li {
+  background-color: #bebebe;
   color: #fff;
   display: inline-block;
-  background-color: #bebebe;
   padding: 2px 12px;
   margin-right: 12px;
   -webkit-transform: skew(-10deg, 0);
@@ -139,4 +139,7 @@ article {
     transform: skew(10deg, 0); }
 
 .block-views-videos-block-2 {
-  clear: both; }
+  clear: both;
+  padding: 8% 0; }
+  .block-views-videos-block-2 .view-header {
+    margin-bottom: 14px; }

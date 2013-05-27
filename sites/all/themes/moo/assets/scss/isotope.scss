@@ -1,0 +1,107 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "grid-settings";
+@import "defaults";
+
+/* Start: Recommended Isotope styles */
+
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/* End: Recommended Isotope styles */
+
+/* Project View Specific */
+.view-id-videos > .item-list {
+    clear: both;
+}
+.view-project-taxonomy {
+  .view-header {
+    float: left;
+    margin-right: 2%;
+  }
+  ul a {
+    float: left;
+    @include skew;
+    background-color: #949494;
+    &.active, &:hover {
+      background-color:$green;
+      font-weight: normal;
+    }
+  }
+}
+.isotope {
+  clear: both;
+  .views-field-nothing {
+    background: url(../images/blue-bg.png);
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    h3 {
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    a {
+      color: #fff;
+      display: block;
+      width: 368px;
+      height: 212px;
+      padding: 125px 15px 0;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .isotope-item {
+    height: 212px;
+    width: 368px;
+  }
+}

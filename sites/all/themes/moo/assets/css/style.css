@@ -26,9 +26,22 @@ font-family: 'Merriweather', serif;
 /* ------------------------------------
  General defaults
 -------------------------------------*/
+/* Sticky Footer */
+* {
+  margin: 0; }
+
+html, body {
+  height: 100%; }
+
+.wrap {
+  height: 100%;
+  min-height: 100%;
+  margin: 0 auto -416px;
+  /* the bottom margin is the negative value of the footer's height */ }
+
 html:before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 50%;
   border: 620px solid #7f7f7f;
@@ -47,7 +60,7 @@ body {
   line-height: 2em; }
   body::before {
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 50%;
     border: 804px solid #4f4f4f;
@@ -256,13 +269,29 @@ header figure {
   color: #000;
   padding: 1em 1.5em; }
 
+/* Team Node */
+.node-team .field-type-image {
+  width: 48%;
+  float: left;
+  margin-right: 4%; }
+.node-team h1 {
+  font-size: 2.7em;
+  margin-bottom: 5px; }
+.node-team h2 {
+  font-size: 2em;
+  color: #aaa; }
+
 /* ------------------------------------
  Footer
 -------------------------------------*/
+.footer-wrap, .push {
+  height: 416px; }
+
 .footer-wrap {
   clear: both;
   background: url(../images/grass.png) repeat-x scroll bottom center;
-  min-height: 350px;
+  overflow: hidden;
+  padding-top: 70px;
   width: 100%; }
 
 footer {

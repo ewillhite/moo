@@ -24,6 +24,18 @@ $gray: #bebebe;
   }
 }
 
+@mixin skew {
+  color: #fff;
+  display: inline-block;
+  padding: 2px 12px;
+  margin-right: 12px;
+  @include transform(skew(-10deg, 0));
+  span {
+    display: inline-block;
+    @include transform(skew(10deg, 0));
+  }
+}
+
 /* Fonts */
 @font-face {
     font-family: 'Nilland';

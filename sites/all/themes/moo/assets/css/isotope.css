@@ -1,0 +1,116 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* Fonts */
+@font-face {
+  font-family: 'Nilland';
+  src: url("../fonts/nilland-webfont.eot");
+  src: url("../fonts/nilland-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/nilland-webfont.woff") format("woff"), url("../fonts/nilland-webfont.ttf") format("truetype"), url("../fonts/nilland-webfont.svg#nillandregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Nillandbold';
+  src: url("../fonts/nilland-bold-webfont.eot");
+  src: url("../fonts/nilland-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/nilland-bold-webfont.woff") format("woff"), url("../fonts/nilland-bold-webfont.ttf") format("truetype"), url("../fonts/nilland-bold-webfont.svg#nillandbold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Start: Recommended Isotope styles */
+/**** Isotope Filtering ****/
+.isotope-item {
+  z-index: 2; }
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1; }
+
+/**** Isotope CSS3 transitions ****/
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s; }
+
+.isotope {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width; }
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  -ms-transition-property: -ms-transform, opacity;
+  -o-transition-property: -o-transform, opacity;
+  transition-property: transform, opacity; }
+
+/**** disabling Isotope CSS3 transitions ****/
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+  -moz-transition-duration: 0s;
+  -ms-transition-duration: 0s;
+  -o-transition-duration: 0s;
+  transition-duration: 0s; }
+
+/* End: Recommended Isotope styles */
+/* Project View Specific */
+.view-id-videos > .item-list {
+  clear: both; }
+
+.view-project-taxonomy .view-header {
+  float: left;
+  margin-right: 2%; }
+.view-project-taxonomy ul a {
+  float: left;
+  color: #fff;
+  display: inline-block;
+  padding: 2px 12px;
+  margin-right: 12px;
+  -webkit-transform: skew(-10deg, 0);
+  -moz-transform: skew(-10deg, 0);
+  -ms-transform: skew(-10deg, 0);
+  -o-transform: skew(-10deg, 0);
+  transform: skew(-10deg, 0);
+  background-color: #949494; }
+  .view-project-taxonomy ul a span {
+    display: inline-block;
+    -webkit-transform: skew(10deg, 0);
+    -moz-transform: skew(10deg, 0);
+    -ms-transform: skew(10deg, 0);
+    -o-transform: skew(10deg, 0);
+    transform: skew(10deg, 0); }
+  .view-project-taxonomy ul a.active, .view-project-taxonomy ul a:hover {
+    background-color: #30a13f;
+    font-weight: normal; }
+
+.isotope {
+  clear: both; }
+  .isotope .views-field-nothing {
+    background: url(../images/blue-bg.png);
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center; }
+    .isotope .views-field-nothing h3 {
+      color: #fff;
+      margin-bottom: 10px; }
+    .isotope .views-field-nothing a {
+      color: #fff;
+      display: block;
+      width: 368px;
+      height: 212px;
+      padding: 125px 15px 0; }
+      .isotope .views-field-nothing a:hover {
+        text-decoration: none; }
+  .isotope .isotope-item {
+    height: 212px;
+    width: 368px; }

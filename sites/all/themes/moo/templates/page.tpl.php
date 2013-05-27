@@ -62,7 +62,14 @@
       <?php print render($page['sidebar']); ?>
       </div>
     <?php endif; ?>
+
+    <?php if ($page['post_content']): ?>
+      <div class="post-content">
+      <?php print render($page['post_content']); ?>
+      </div>
+    <?php endif; ?>
   </div><!--/page-->
+  <div class="push"></div>
 </div><!--/wrap-->
 
 <div class="footer-wrap">

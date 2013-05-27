@@ -24,7 +24,9 @@ $(function() {
           case 'ready':
               onReady();
               break;
-
+          case 'pause':
+              onPause();
+              break;
           case 'finish':
               onFinish();
               break;
@@ -56,6 +58,9 @@ $(function() {
   }
 
   function onFinish() {
+      $('.header-region .views-field-nothing a').fadeIn();
+  }
+  function onPause() {
       $('.header-region .views-field-nothing a').fadeIn();
   }
 
