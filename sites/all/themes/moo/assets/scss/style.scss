@@ -99,6 +99,9 @@ img, object, video {
 
 a {
   color: #000;
+  &.blue {
+    color: $blue;
+  }
 }
 .wrap, .footer-container {
   @include outer-container;
@@ -238,9 +241,13 @@ header {
   background-color:#fff;
   color: #000;
   padding:1em 1.5em;
+  position: relative;
 }
 
 /* Team Node */
+.node-type-team .post-content {
+  margin-top: 6%;
+}
 .node-team {
   .field-type-image {
     width: 48%;
