@@ -51,13 +51,13 @@ body {
     position: fixed;
     top: 0;
     left: 50%;
+    z-index: -1;
+    margin-left:-804px;
     border: 804px solid #4f4f4f;
     border-bottom-color: transparent;
     border-right-color: transparent;
     border-left-color: transparent;
-    z-index: -1;
     opacity: .6;
-    margin-left:-804px;
   }
 }
 /* - Typography Basics - from Gridless http://thatcoolguy.github.com/gridless-boilerplate/ */
