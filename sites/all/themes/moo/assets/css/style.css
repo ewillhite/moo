@@ -27,6 +27,9 @@ font-family: 'Merriweather', serif;
  General defaults
 -------------------------------------*/
 /* Sticky Footer */
+@media screen and (min-width: 1024px) {
+  body::after {
+    content: "desktop"; } }
 * {
   margin: 0; }
 
@@ -124,12 +127,16 @@ a {
     clear: both; }
 
 header, .page, footer {
+  padding: 0 4%;
   display: block;
   float: left;
   margin-right: 1.75788%;
   width: 100%; }
   header:last-child, .page:last-child, footer:last-child {
     margin-right: 0; }
+  @media screen and (min-width: 768px) {
+    header, .page, footer {
+      padding: 0; } }
 
 /* ------------------------------------
  Drupal defaults
@@ -198,7 +205,12 @@ input[type="submit"] {
   font-family: "Nilland", serif;
   padding: 0.5% 2%;
   font-size: 1.1em;
+  text-align: center;
+  width: 100%;
   padding: 0.75% 1.5%; }
+  @media screen and (min-width: 768px) {
+    .page input[type="submit"] {
+      width: auto; } }
   .page input[type="submit"]:hover {
     background-color: #40a84e;
     text-decoration: none; }
@@ -215,7 +227,12 @@ input[type="submit"] {
   display: inline-block;
   font-family: "Nilland", serif;
   padding: 0.5% 2%;
-  font-size: 1.1em; }
+  font-size: 1.1em;
+  text-align: center;
+  width: 100%; }
+  @media screen and (min-width: 768px) {
+    .views-field-view-node a {
+      width: auto; } }
   .views-field-view-node a:hover {
     background-color: #40a84e;
     text-decoration: none; }
@@ -225,43 +242,74 @@ input[type="submit"] {
 -------------------------------------*/
 /* Nav gradient from #30a13f to #2a8c37; */
 header figure {
-  float: left;
-  margin: 2% 0; }
+  margin: 4% 0 0; }
+  @media screen and (min-width: 768px) {
+    header figure {
+      float: left;
+      margin: 2% 0; } }
   header figure a {
     background: url(../images/sprite.png) no-repeat scroll 0 0;
-    background-position: 0 -34px;
+    background-position: 0 -20px;
     display: block;
     height: 0;
     overflow: hidden;
-    width: 363px;
-    padding-top: 147px; }
+    background-size: cover;
+    margin: 0 auto;
+    padding-top: 173px;
+    width: 263px; }
+    @media screen and (min-width: 768px) {
+      header figure a {
+        background-position: 0 -34px;
+        background-size: auto;
+        margin: 0;
+        padding-top: 147px;
+        width: 363px; } }
 
-.header-region nav {
-  display: inline-block;
-  margin: 6% 1%;
-  float: right; }
-  .header-region nav h2 {
-    display: none; }
-  .header-region nav li {
+.header-region {
+  margin-top: -55px;
+  text-align: center; }
+  @media screen and (min-width: 768px) {
+    .header-region {
+      margin-top: 0;
+      text-align: left; } }
+  .header-region nav {
     display: inline-block;
-    float: left; }
-  .header-region nav > ul a {
-    background-color: #d3d3d3;
-    color: #545454;
-    display: block;
-    padding: 9px 25px;
-    border: 1px solid #b9b9b9; }
-    .header-region nav > ul a:hover, .header-region nav > ul a.active {
-      background-color: #30a13f;
-      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #30a13f), color-stop(100%, #2a8c37));
-      background-image: -webkit-linear-gradient(top, #30a13f, #2a8c37);
-      background-image: -moz-linear-gradient(top, #30a13f, #2a8c37);
-      background-image: -ms-linear-gradient(top, #30a13f, #2a8c37);
-      background-image: -o-linear-gradient(top, #30a13f, #2a8c37);
-      background-image: linear-gradient(top, #30a13f, #2a8c37);
-      border-color: #3b9147;
-      color: #fff;
-      text-decoration: none; }
+    margin: 6% 1%; }
+    @media screen and (min-width: 768px) {
+      .header-region nav {
+        float: right; } }
+    .header-region nav h2 {
+      display: none; }
+    .header-region nav li {
+      display: inline-block;
+      float: left; }
+      .header-region nav li.last {
+        display: none; }
+        @media screen and (min-width: 768px) {
+          .header-region nav li.last {
+            display: inline-block; } }
+    .header-region nav > ul a {
+      background-color: #d3d3d3;
+      color: #545454;
+      display: block;
+      padding: 8% 0;
+      width: 69px;
+      border: 1px solid #b9b9b9; }
+      @media screen and (min-width: 768px) {
+        .header-region nav > ul a {
+          padding: 9px 25px;
+          width: auto; } }
+      .header-region nav > ul a:hover, .header-region nav > ul a.active {
+        background-color: #30a13f;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #30a13f), color-stop(100%, #2a8c37));
+        background-image: -webkit-linear-gradient(top, #30a13f, #2a8c37);
+        background-image: -moz-linear-gradient(top, #30a13f, #2a8c37);
+        background-image: -ms-linear-gradient(top, #30a13f, #2a8c37);
+        background-image: -o-linear-gradient(top, #30a13f, #2a8c37);
+        background-image: linear-gradient(top, #30a13f, #2a8c37);
+        border-color: #3b9147;
+        color: #fff;
+        text-decoration: none; }
 
 /* ------------------------------------
  Content
@@ -290,23 +338,28 @@ header figure {
 /* ------------------------------------
  Footer
 -------------------------------------*/
-.footer-wrap, .push {
-  height: 416px; }
-
+@media screen and (min-width: 768px) {
+  .footer-wrap, .push {
+    height: 416px; } }
 .footer-wrap {
   clear: both;
   background: url(../images/grass.png) repeat-x scroll bottom center;
   overflow: hidden;
-  padding-top: 70px;
+  padding-bottom: 70px;
   width: 100%; }
+  @media screen and (min-width: 768px) {
+    .footer-wrap {
+      padding-top: 70px;
+      padding-bottom: 0; } }
 
 footer {
   font-size: .8em;
   position: relative; }
-  footer > * {
-    display: inline-block;
-    float: left;
-    width: 24%; }
+  @media screen and (min-width: 768px) {
+    footer > * {
+      display: inline-block;
+      float: left;
+      width: 24%; } }
   footer h2 {
     font: 1.3em/2em Arial, sans-serif; }
   footer a, footer a.active {
@@ -326,5 +379,8 @@ footer {
     width: 278px;
     position: absolute;
     bottom: -117px;
-    right: -4px;
+    right: -38px;
     z-index: -1; }
+    @media screen and (min-width: 768px) {
+      footer .mootv {
+        right: -4px; } }

@@ -13,6 +13,11 @@ font-family: 'Merriweather', serif;
  General defaults
 -------------------------------------*/
 /* Sticky Footer */
+@include media($desktop) {
+  body::after {
+    content:"desktop";
+  }
+}
 * {
   margin: 0;
 }
@@ -107,7 +112,11 @@ a {
   @include outer-container;
 }
 header, .page, footer {
+  padding: 0 4%;
   @include span-columns(16);
+  @include media($tablet) {
+    padding:0;
+  }
 }
 
 /* ------------------------------------
@@ -196,32 +205,63 @@ input[type="submit"] {
 /* Nav gradient from #30a13f to #2a8c37; */
 header {
   figure {
-    float: left;
-    margin: 2% 0;
+    margin: 4% 0 0;
+    @include media($tablet) {
+      float: left;
+      margin: 2% 0;
+    }
     a {
-      @include sprite(0 -34px);
-      width: 363px;
-      padding-top: 147px;
+      @include sprite(0 -20px);
+      background-size: cover;
+      margin: 0 auto;
+      padding-top: 173px;
+      width:263px;
+      @include media($tablet) {
+        background-position: 0 -34px;
+        background-size:auto;
+        margin: 0;
+        padding-top: 147px;
+        width: 363px;
+      }
     }
   }
 }
 .header-region {
+  margin-top: -55px;
+  text-align:center;
+  @include media($tablet) {
+    margin-top: 0;
+    text-align: left;
+  }
   nav {
     display: inline-block;
     margin: 6% 1%;
-    float: right;
+    @include media($tablet) {
+      float: right;
+    }
     h2 {
       display: none;
     }
     li {
       display: inline-block;
       float: left;
+      &.last {
+        display: none;
+        @include media($tablet) {
+          display: inline-block;
+        }
+      }
     }
     > ul a {
       background-color:#d3d3d3;
       color: #545454;
       display: block;
-      padding: 9px 25px;
+      padding: 8% 0;
+      width: 69px;
+      @include media($tablet) {
+        padding: 9px 25px;
+        width: auto;
+      }
       border: 1px solid #b9b9b9;
       &:hover, &.active {
         @include linear-gradient(#30a13f, #2a8c37);
@@ -267,23 +307,31 @@ header {
  Footer
 -------------------------------------*/
 
-.footer-wrap, .push {
-  height: 416px;
+@include media($tablet) {
+  .footer-wrap, .push {
+    height: 416px;
+  }
 }
 .footer-wrap {
   clear: both;
   background:url(../images/grass.png) repeat-x scroll bottom center;
   overflow: hidden;
-  padding-top:70px;
+  padding-bottom: 70px;
+  @include media($tablet) {
+    padding-top:70px;
+    padding-bottom:0;
+  }
   width: 100%;
 }
 footer {
   font-size: .8em;
   position: relative;
-  > * {
-    display: inline-block;
-    float: left;
-    width: 24%;
+  @include media($tablet) {
+    > * {
+      display: inline-block;
+      float: left;
+      width: 24%;
+    }
   }
   h2 {
     font: 1.3em/2em Arial, sans-serif;
@@ -303,7 +351,10 @@ footer {
     width: 278px;
     position: absolute;
     bottom: -117px;
-    right: -4px;
+    right: -38px;
+    @include media($tablet) {
+      right: -4px;
+    }
     z-index: -1;
   }
 }

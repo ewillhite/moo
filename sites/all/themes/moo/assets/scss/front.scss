@@ -10,32 +10,50 @@
   > div {
     clear: both;
     box-shadow: 0 0 9px #1f1f1f;
-    min-height: 500px;
     position: relative;
   }
   .views-field-nothing a {
-    @include sprite(-630px 0);
+    @include sprite(-247px 0);
+    width: 300px;
     padding-top: 176px;
-    width: 142px;
     position: absolute;
     left: 50%;
-    margin-left: -68px;
+    margin-left: -24px;
     top: 50%;
-    margin-top: -123px;
+    margin-top: -47px;
+    background-size: contain;
+    display: none;
+    @include media ($tablet) {
+      background-size:auto;
+      background-position: -630px 0;
+      display: block;
+      margin-left: -68px;
+      margin-top: -123px;
+      width: 142px;
+    }
     &:hover {
       opacity: .9;
     }
   }
 }
 h1 {
-  float: left;
-  font-size: 2.7em;
-  margin-right:5%;
-  width: 38%;
+  font-size: 1.7em;
+  text-align: center;
+  @include media ($tablet) {
+    float: left;
+    font-size: 2.7em;
+    margin-right:5%;
+    text-align: left;
+    width: 38%;
+  }
 }
 article {
-  float: left;
-  width: 57%;
+  text-align: center;
+  @include media ($tablet) {
+    float: left;
+    text-align: left;
+    width: 57%;
+  }
 }
 
 
@@ -56,8 +74,12 @@ article {
   clear: both;
   color: #222;
   margin: 8% 0;
-  float: left;
   position: relative;
+  padding: 2%;
+  @include media($tablet) {
+    float: left;
+    padding: 0;
+  }
   &:after {
     content: "";
     border: 123px solid #4f4f4f;
@@ -73,14 +95,23 @@ article {
   }
   h2 {
     margin: 0;
-    padding-top: 30px;
+    font-size: 1.6em;
+    @include media($tablet) {
+      font-size: 2.625em;
+      padding-top: 30px;
+    }
     a {
       color: $blue;
     }
   }
   h3 {
     color: #595959;
-    margin-bottom: 19px;
+    margin-bottom: 12px;
+    font-size: 1.2em;
+    @include media($tablet) {
+      font-size: 1.625em;
+      margin-bottom: 19px;
+    }
   }
 }
 .view-id-team:after {
@@ -96,12 +127,14 @@ article {
     z-index: -1;
     opacity: .7;
 }
-.views-field-field-staff-image {
-  float: left;
-  margin-right:3%;
-  width: 49%;
-  img {
-    display: block;
+@include media($tablet) {
+  .views-field-field-staff-image {
+    float: left;
+    margin-right:3%;
+    width: 49%;
+    img {
+      display: block;
+    }
   }
 }
 .views-field-body p {
@@ -111,6 +144,12 @@ article {
 .views-field-view-node {
   margin: 15px 0;
 }
+.views-field-field-team-category {
+    display: none;
+    @include media($tablet) {
+      display: block;
+    }
+}
 .views-field-field-team-category ol {
   li {
       background-color: #bebebe;
@@ -119,7 +158,10 @@ article {
 }
 .block-views-videos-block-2 {
   clear: both;
-  padding: 8% 0;
+  padding: 26% 0;
+  @include media($tablet) {
+    padding: 8% 0;
+  }
   .view-header {
     margin-bottom: 14px;
   }

@@ -63,8 +63,16 @@
 }
 .view-project-taxonomy {
   .view-header {
-    float: left;
-    margin-right: 2%;
+    h3 {
+      text-align: center;
+    }
+    @include media($tablet) {
+      float: left;
+      margin-right: 2%;
+      h3 {
+        text-align: left;
+      }
+    }
   }
   ul a {
     float: left;
@@ -92,16 +100,27 @@
     a {
       color: #fff;
       display: block;
-      width: 368px;
-      height: 212px;
-      padding: 125px 15px 0;
+      height: 162px;
+      padding: 82px 15px 0;
+      width: 282px;
+      @include media($tablet) {
+        height: 212px;
+        padding: 125px 15px 0;
+        width: 368px;
+      }
       &:hover {
         text-decoration: none;
       }
     }
   }
   .isotope-item {
-    height: 212px;
-    width: 368px;
+    margin: 0 0 4%;
+    height: 162px;
+    width: 282px;
+    @include media($tablet) {
+      margin: 0;
+      height: 212px;
+      width: 368px;
+    }
   }
 }

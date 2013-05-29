@@ -18,6 +18,11 @@ $gray: #bebebe;
   font-family: 'Nilland', serif;
   padding: .5% 2%;
   font-size: 1.1em;
+  text-align: center;
+  width: 100%;
+  @include media($tablet) {
+    width: auto;
+  }
   &:hover {
     background-color: tint($green, 8%);
     text-decoration: none;

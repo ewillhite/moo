@@ -1,1 +1,1 @@
-(function(e){e(function(){e(".media-vimeo-video").fitVids()})})(jQuery);
+(function(e){e(function(){e(".media-vimeo-video").fitVids();e("body:after").css(!1)&&alert("hello")})})(jQuery);

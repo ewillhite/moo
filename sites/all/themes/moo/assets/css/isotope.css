@@ -65,9 +65,14 @@
 .view-id-videos > .item-list {
   clear: both; }
 
-.view-project-taxonomy .view-header {
-  float: left;
-  margin-right: 2%; }
+.view-project-taxonomy .view-header h3 {
+  text-align: center; }
+@media screen and (min-width: 768px) {
+  .view-project-taxonomy .view-header {
+    float: left;
+    margin-right: 2%; }
+    .view-project-taxonomy .view-header h3 {
+      text-align: left; } }
 .view-project-taxonomy ul a {
   float: left;
   color: #fff;
@@ -106,11 +111,22 @@
     .isotope .views-field-nothing a {
       color: #fff;
       display: block;
-      width: 368px;
-      height: 212px;
-      padding: 125px 15px 0; }
+      height: 162px;
+      padding: 82px 15px 0;
+      width: 282px; }
+      @media screen and (min-width: 768px) {
+        .isotope .views-field-nothing a {
+          height: 212px;
+          padding: 125px 15px 0;
+          width: 368px; } }
       .isotope .views-field-nothing a:hover {
         text-decoration: none; }
   .isotope .isotope-item {
-    height: 212px;
-    width: 368px; }
+    margin: 0 0 4%;
+    height: 162px;
+    width: 282px; }
+    @media screen and (min-width: 768px) {
+      .isotope .isotope-item {
+        margin: 0;
+        height: 212px;
+        width: 368px; } }
