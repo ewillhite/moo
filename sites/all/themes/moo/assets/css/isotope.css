@@ -101,6 +101,7 @@
     transform: skew(10deg, 0); }
   @media screen and (min-width: 868px) {
     .view-project-taxonomy ul a {
+      font-size: .9em;
       margin: 0 12px 0 0;
       padding: 2px 12px; } }
   .view-project-taxonomy ul a.active, .view-project-taxonomy ul a:hover {
@@ -133,7 +134,7 @@
       .isotope .views-field-nothing a:hover {
         text-decoration: none; }
   .isotope .isotope-item {
-    margin: 0 0 4%;
+    margin: 0 1% 4%;
     height: 162px;
     width: 282px; }
     @media screen and (min-width: 868px) {
