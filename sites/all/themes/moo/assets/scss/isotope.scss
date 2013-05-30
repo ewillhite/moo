@@ -64,19 +64,31 @@
 .view-project-taxonomy {
   .view-header {
     h3 {
+      color: #aaa;
       text-align: center;
     }
     @include media($tablet) {
       float: left;
       margin-right: 2%;
       h3 {
+        color: $blue;
         text-align: left;
       }
     }
   }
+  ul li {
+    margin: 0;
+  }
   ul a {
     float: left;
     @include skew;
+    font-size: .8em;
+    margin: 0 .4% 5%;
+    padding: 0 7px;
+    @include media($tablet) {
+      margin: 0 12px 0 0;
+      padding: 2px 12px;
+    }
     background-color: #949494;
     &.active, &:hover {
       background-color:$green;

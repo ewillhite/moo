@@ -40,7 +40,7 @@
   margin-top: -47px;
   background-size: contain;
   display: none; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 868px) {
     .header-region .views-field-nothing a {
       background-size: auto;
       background-position: -630px 0;
@@ -54,7 +54,7 @@
 h1 {
   font-size: 1.7em;
   text-align: center; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 868px) {
     h1 {
       float: left;
       font-size: 2.7em;
@@ -63,10 +63,14 @@ h1 {
       width: 38%; } }
 
 article {
+  font-size: 0.9em;
+  padding: 0 7%;
   text-align: center; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 868px) {
     article {
       float: left;
+      font-size: 100%;
+      padding: 0;
       text-align: left;
       width: 57%; } }
 
@@ -89,7 +93,7 @@ article {
   margin: 8% 0;
   position: relative;
   padding: 2%; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 868px) {
     .block-views-team-block-1 {
       float: left;
       padding: 0; } }
@@ -108,7 +112,7 @@ article {
   .block-views-team-block-1 h2 {
     margin: 0;
     font-size: 1.6em; }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 868px) {
       .block-views-team-block-1 h2 {
         font-size: 2.625em;
         padding-top: 30px; } }
@@ -118,7 +122,7 @@ article {
     color: #595959;
     margin-bottom: 12px;
     font-size: 1.2em; }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 868px) {
       .block-views-team-block-1 h3 {
         font-size: 1.625em;
         margin-bottom: 19px; } }
@@ -136,7 +140,7 @@ article {
   z-index: -1;
   opacity: .7; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 868px) {
   .views-field-field-staff-image {
     float: left;
     margin-right: 3%;
@@ -152,7 +156,7 @@ article {
 
 .views-field-field-team-category {
   display: none; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 868px) {
     .views-field-field-team-category {
       display: block; } }
 
@@ -177,8 +181,8 @@ article {
 
 .block-views-videos-block-2 {
   clear: both;
-  padding: 26% 0; }
-  @media screen and (min-width: 768px) {
+  padding: 26% 4% 0; }
+  @media screen and (min-width: 868px) {
     .block-views-videos-block-2 {
       padding: 8% 0; } }
   .block-views-videos-block-2 .view-header {

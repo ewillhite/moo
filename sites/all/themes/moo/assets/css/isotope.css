@@ -66,13 +66,17 @@
   clear: both; }
 
 .view-project-taxonomy .view-header h3 {
+  color: #aaa;
   text-align: center; }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 868px) {
   .view-project-taxonomy .view-header {
     float: left;
     margin-right: 2%; }
     .view-project-taxonomy .view-header h3 {
+      color: #00adef;
       text-align: left; } }
+.view-project-taxonomy ul li {
+  margin: 0; }
 .view-project-taxonomy ul a {
   float: left;
   color: #fff;
@@ -84,6 +88,9 @@
   -ms-transform: skew(-10deg, 0);
   -o-transform: skew(-10deg, 0);
   transform: skew(-10deg, 0);
+  font-size: .8em;
+  margin: 0 0.4% 5%;
+  padding: 0 7px;
   background-color: #949494; }
   .view-project-taxonomy ul a span {
     display: inline-block;
@@ -92,6 +99,10 @@
     -ms-transform: skew(10deg, 0);
     -o-transform: skew(10deg, 0);
     transform: skew(10deg, 0); }
+  @media screen and (min-width: 868px) {
+    .view-project-taxonomy ul a {
+      margin: 0 12px 0 0;
+      padding: 2px 12px; } }
   .view-project-taxonomy ul a.active, .view-project-taxonomy ul a:hover {
     background-color: #30a13f;
     font-weight: normal; }
@@ -114,7 +125,7 @@
       height: 162px;
       padding: 82px 15px 0;
       width: 282px; }
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 868px) {
         .isotope .views-field-nothing a {
           height: 212px;
           padding: 125px 15px 0;
@@ -125,7 +136,7 @@
     margin: 0 0 4%;
     height: 162px;
     width: 282px; }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 868px) {
       .isotope .isotope-item {
         margin: 0 1%;
         height: 212px;
