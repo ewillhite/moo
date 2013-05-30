@@ -145,7 +145,7 @@ header, .page, footer {
   padding: 0; }
   @media screen and (min-width: 868px) {
     .page {
-      padding: 0 4%; } }
+      padding: 0 2%; } }
 
 /* ------------------------------------
  Drupal defaults

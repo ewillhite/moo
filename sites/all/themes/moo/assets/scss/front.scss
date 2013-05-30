@@ -133,9 +133,13 @@ article {
     z-index: -1;
     opacity: .7;
 }
-@include media($tablet) {
   .views-field-field-staff-image {
+  @media(all and min-width:612px) {
     float: left;
+    margin-right: 2%;
+    width: 46%;
+  }
+  @include media($tablet) {
     margin-right:3%;
     width: 49%;
     img {
@@ -164,7 +168,7 @@ article {
 }
 .block-views-videos-block-2 {
   clear: both;
-  padding: 26% 4% 0;
+  padding: 16% 4% 0;
   @include media($tablet) {
     padding: 8% 0;
   }

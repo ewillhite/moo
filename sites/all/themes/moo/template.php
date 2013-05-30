@@ -3,7 +3,7 @@
 // If Front Page
 if (drupal_is_front_page()) {
   drupal_add_css(drupal_get_path('theme', 'moo') .'/assets/css/front.css', array('group' => CSS_THEME));
-  drupal_add_js(drupal_get_path('theme', 'moo') .'/assets/js/front.js', array('group' => JS_THEME));
+  drupal_add_js(drupal_get_path('theme', 'moo') .'/assets/js/front-ck.js', array('group' => JS_THEME));
 }
 
 // Views Pre-Render Function
@@ -12,14 +12,14 @@ function moo_views_pre_render(&$view) {
     if ($view->current_display == 'block_2' || $view->current_display == 'videos_page') {
       drupal_add_css(drupal_get_path('theme', 'moo') .'/assets/css/isotope.css', array('group' => CSS_THEME));
       drupal_add_js(drupal_get_path('theme', 'moo') .'/assets/js/jquery.isotope.min.js', array('group' => JS_THEME));
-      drupal_add_js(drupal_get_path('theme', 'moo') .'/assets/js/isotope.js', array('group' => JS_THEME));
+      drupal_add_js(drupal_get_path('theme', 'moo') .'/assets/js/isotope-ck.js', array('group' => JS_THEME));
     }
   }
   if($view->name == 'team') {
     if ($view->current_display == 'page') {
       drupal_add_css(drupal_get_path('theme', 'moo') .'/assets/css/isotope.css', array('group' => CSS_THEME));
       drupal_add_js(drupal_get_path('theme', 'moo') .'/assets/js/jquery.isotope.min.js', array('group' => JS_THEME));
-      drupal_add_js(drupal_get_path('theme', 'moo') .'/assets/js/isotope.js', array('group' => JS_THEME));
+      drupal_add_js(drupal_get_path('theme', 'moo') .'/assets/js/isotope-ck.js', array('group' => JS_THEME));
     }
   }
 }

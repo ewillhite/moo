@@ -142,13 +142,18 @@ article {
   z-index: -1;
   opacity: .7; }
 
-@media screen and (min-width: 868px) {
+@media (min-width: 612px) {
   .views-field-field-staff-image {
     float: left;
+    margin-right: 2%;
+    width: 46%; } }
+@media screen and (min-width: 868px) {
+  .views-field-field-staff-image {
     margin-right: 3%;
     width: 49%; }
     .views-field-field-staff-image img {
       display: block; } }
+
 .views-field-body p {
   font-size: .8em;
   line-height: 1.5em; }
@@ -183,7 +188,7 @@ article {
 
 .block-views-videos-block-2 {
   clear: both;
-  padding: 26% 4% 0; }
+  padding: 16% 4% 0; }
   @media screen and (min-width: 868px) {
     .block-views-videos-block-2 {
       padding: 8% 0; } }
