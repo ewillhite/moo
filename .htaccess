@@ -139,3 +139,9 @@ DirectoryIndex index.php index.html index.htm
     </FilesMatch>
   </IfModule>
 </IfModule>
+
+#
+# Add SVG mime type support (unsupported on Media Temple DV by default apparently)
+#
+AddType image/svg+xml svg svgz
+AddEncoding gzip svgz
