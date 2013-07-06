@@ -22,6 +22,10 @@ function moo_views_pre_render(&$view) {
       drupal_add_js(drupal_get_path('theme', 'moo') .'/assets/js/isotope-ck.js', array('group' => JS_THEME));
     }
   }
+  if($view->name == 'private_work') {
+  	drupal_add_css(drupal_get_path('theme', 'moo') .'/assets/css/private-work.css', array('group' => CSS_THEME));
+  	drupal_add_js(drupal_get_path('theme', 'moo') .'/assets/js/private-work.js', array('group' => JS_THEME));
+  }
 }
 
 /*

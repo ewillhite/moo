@@ -181,6 +181,9 @@ ul.primary {
   margin: 0.5% 3%; }
 
 /* Tables */
+table {
+  width: 100%;
+}
 td, th {
   padding: 2%; }
 
