@@ -12,8 +12,6 @@ $(function() {
 	});
 	
 	$('.vbo-views-form legend a').click();
-	
-	$('.views-field-filesize').addClass('clickable');
 });
 
 })(jQuery);
