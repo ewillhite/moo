@@ -109,3 +109,12 @@
   float: left;
   margin-top: 11px;
 }
+.link {
+  float: left;
+  margin: 16px 10px;
+  font-size: .9em;
+  span {
+    background-color: #fff;
+    padding: 8px;
+  }
+}

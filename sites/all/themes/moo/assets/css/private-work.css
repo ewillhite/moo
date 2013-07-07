@@ -124,3 +124,11 @@
   .download:hover {
     background-color: #40a84e;
     text-decoration: none; }
+
+.link {
+  float: left;
+  margin: 16px 10px;
+  font-size: .9em; }
+  .link span {
+    background-color: #fff;
+    padding: 8px; }
