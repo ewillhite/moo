@@ -14,8 +14,8 @@ function d7_videos_user_default_permissions() {
   $permissions['add media from remote sources'] = array(
     'name' => 'add media from remote sources',
     'roles' => array(
-      'client' => 'client',
       'developer' => 'developer',
+      'team' => 'team',
     ),
     'module' => 'media_internet',
   );
@@ -24,8 +24,8 @@ function d7_videos_user_default_permissions() {
   $permissions['create video content'] = array(
     'name' => 'create video content',
     'roles' => array(
-      'client' => 'client',
       'developer' => 'developer',
+      'team' => 'team',
     ),
     'module' => 'node',
   );
@@ -34,8 +34,8 @@ function d7_videos_user_default_permissions() {
   $permissions['delete any video content'] = array(
     'name' => 'delete any video content',
     'roles' => array(
-      'client' => 'client',
       'developer' => 'developer',
+      'team' => 'team',
     ),
     'module' => 'node',
   );
@@ -44,8 +44,8 @@ function d7_videos_user_default_permissions() {
   $permissions['delete own video content'] = array(
     'name' => 'delete own video content',
     'roles' => array(
-      'client' => 'client',
       'developer' => 'developer',
+      'team' => 'team',
     ),
     'module' => 'node',
   );
@@ -54,8 +54,8 @@ function d7_videos_user_default_permissions() {
   $permissions['edit any video content'] = array(
     'name' => 'edit any video content',
     'roles' => array(
-      'client' => 'client',
       'developer' => 'developer',
+      'team' => 'team',
     ),
     'module' => 'node',
   );
@@ -64,8 +64,8 @@ function d7_videos_user_default_permissions() {
   $permissions['edit own video content'] = array(
     'name' => 'edit own video content',
     'roles' => array(
-      'client' => 'client',
       'developer' => 'developer',
+      'team' => 'team',
     ),
     'module' => 'node',
   );

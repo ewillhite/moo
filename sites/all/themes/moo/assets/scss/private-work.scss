@@ -1,0 +1,107 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "grid-settings";
+@import "defaults";
+
+.hidden, .vbo-fieldset-select-all {
+  display: none;
+}
+.hidden {
+  background-color: #eee;
+  display: block;
+  padding: 2%;
+}
+.field-type-file {
+  float: left;
+  margin-right: 3%;
+  width: 46%;
+}
+.field-type-text-with-summary h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+.clickable {
+  cursor: pointer;
+  &:hover {
+    text-decoration:underline;
+  }
+}
+.views-field-filesize.clickable {
+  background-color: #ccc;
+}
+.views-exposed-widgets {
+  margin-bottom: 0;
+}
+.view-private-work {
+  .view-filters {
+    background-color: #eee;
+    padding: 0 1%;
+  }
+  .views-exposed-widget {
+    > label {
+      float: left;
+      margin-right: 5px;
+    }
+    > .views-widget {
+      display: none;
+      background-color: #eee;
+      clear: left;
+      padding: 15px;
+      width: 311px;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      z-index: 10;
+      &.visible {
+        display: block;
+      }
+    }
+  }
+  ul {
+    margin-top: 35px;
+  }
+}
+.arrow, .fieldset-legend span.summary {
+    border: 8px solid #aaa;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    float: left;
+    position: relative;
+    top: 12px;
+}
+.fieldset-legend span.summary {
+  float: none;
+}
+.js .vbo-views-form fieldset legend .fieldset-legend {
+  background: none;
+  padding: 0;
+}
+#edit-submit-private-work {
+  padding: 7px;
+}
+#edit-title-wrapper, #edit-date-filter-wrapper {
+  margin: 10px 5px;
+  position: relative;
+}
+.vbo-views-form {
+  legend {
+    background-color: #2f2f2f;
+    color: #fff;
+    padding: 1%;
+    a {
+      color: #fff;
+    }
+  }
+}
+.fieldset-wrapper {
+  background-color: #eee;
+  padding: 0 1% 2%;
+}
+.views-field-filesize td:first-child {
+  width: 33px;
+  padding: 1%;
+}
+.download {
+  @include btn;
+}

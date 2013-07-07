@@ -1,93 +1,122 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* Fonts */
+@font-face {
+  font-family: 'Nilland';
+  src: url("../fonts/nilland-webfont.eot");
+  src: url("../fonts/nilland-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/nilland-webfont.woff") format("woff"), url("../fonts/nilland-webfont.ttf") format("truetype"), url("../fonts/nilland-webfont.svg#nillandregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Nillandbold';
+  src: url("../fonts/nilland-bold-webfont.eot");
+  src: url("../fonts/nilland-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/nilland-bold-webfont.woff") format("woff"), url("../fonts/nilland-bold-webfont.ttf") format("truetype"), url("../fonts/nilland-bold-webfont.svg#nillandbold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 .hidden, .vbo-fieldset-select-all {
-	display: none;
-}
+  display: none; }
+
 .hidden {
-	background-color: #eee;
-	display: block;
-	padding: 2%;
-}
+  background-color: #eee;
+  display: block;
+  padding: 2%; }
+
 .field-type-file {
-	float: left;
-	margin-right: 3%;
-	width: 46%;
-}
-.field.field-type-text-with-summary h2 {
-	font-size: 2em;
-	margin-bottom: 10px;
-}
+  float: left;
+  margin-right: 3%;
+  width: 46%; }
+
+.field-type-text-with-summary h2 {
+  font-size: 2em;
+  margin-bottom: 10px; }
+
 .clickable {
-	cursor: pointer;
-}
-.clickable:hover {
-	text-decoration: underline;
-}
-field.views-field-filesize.clickable {
-	background-color: #ccc;
-}
+  cursor: pointer; }
+  .clickable:hover {
+    text-decoration: underline; }
+
+.views-field-filesize.clickable {
+  background-color: #ccc; }
+
 .views-exposed-widgets {
-	margin-bottom: 0;
-}
-.view-private-work .views-exposed-widget > label {
-	float: left;
-	margin-right: 5px;
-}
-.view-private-work .views-exposed-widget > .views-widget {
-	display: none;
-	background-color: #eee;
-	clear: left;
-	padding: 15px;
-	width: 311px;
-	position: absolute;
-	top: 50px;
-	left: 0;
-	z-index: 10;
-}
-.view-private-work .views-exposed-widget > .views-widget.visible {
-	display: block;
-}
-.arrow, .fieldset-legend span.summary {
-    border: 8px solid #aaa;
-    border-right-color: transparent;
-    border-left-color: transparent;
-    border-bottom-color: transparent;
-    float: left;
-    position: relative;
-    top: 12px;
-}
-.fieldset-legend span.summary {
-	float: none;
-}
-.js .vbo-views-form fieldset legend .fieldset-legend {
-	background: none;
-	padding: 0;
-}
-#edit-submit-private-work {
-	padding: 7px;
-}
-#edit-title-wrapper, #edit-date-filter-wrapper {
-	margin: 10px 5px;
-	position: relative;
-}
+  margin-bottom: 0; }
+
 .view-private-work .view-filters {
-	background-color: #eee;
-	padding: 0 1%;
-}
-.vbo-views-form legend {
-	background-color: #2f2f2f;
-	color: #fff;
-	padding: 1%;
-}
-.vbo-views-form legend a {
-	color: #fff;
-}
-.fieldset-wrapper {
-	background-color: #eee;
-	padding: 0 1% 2%;
-}
+  background-color: #eee;
+  padding: 0 1%; }
+.view-private-work .views-exposed-widget > label {
+  float: left;
+  margin-right: 5px; }
+.view-private-work .views-exposed-widget > .views-widget {
+  display: none;
+  background-color: #eee;
+  clear: left;
+  padding: 15px;
+  width: 311px;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  z-index: 10; }
+  .view-private-work .views-exposed-widget > .views-widget.visible {
+    display: block; }
 .view-private-work ul {
-	margin-top: 35px;
-}
+  margin-top: 35px; }
+
+.arrow, .fieldset-legend span.summary {
+  border: 8px solid #aaa;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  float: left;
+  position: relative;
+  top: 12px; }
+
+.fieldset-legend span.summary {
+  float: none; }
+
+.js .vbo-views-form fieldset legend .fieldset-legend {
+  background: none;
+  padding: 0; }
+
+#edit-submit-private-work {
+  padding: 7px; }
+
+#edit-title-wrapper, #edit-date-filter-wrapper {
+  margin: 10px 5px;
+  position: relative; }
+
+.vbo-views-form legend {
+  background-color: #2f2f2f;
+  color: #fff;
+  padding: 1%; }
+  .vbo-views-form legend a {
+    color: #fff; }
+
+.fieldset-wrapper {
+  background-color: #eee;
+  padding: 0 1% 2%; }
+
 .views-field-filesize td:first-child {
-	width: 33px;
-	padding: 1%;
-}
+  width: 33px;
+  padding: 1%; }
+
+.download {
+  background-color: #30a13f;
+  color: #fff;
+  display: inline-block;
+  font-family: 'Nilland', serif;
+  padding: .5% 2%;
+  font-size: 1.1em;
+  text-align: center;
+  width: 100%; }
+  @media screen and (min-width: 868px) {
+    .download {
+      width: auto; } }
+  .download:hover {
+    background-color: #40a84e;
+    text-decoration: none; }
