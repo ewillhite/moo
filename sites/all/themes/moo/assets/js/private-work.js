@@ -13,11 +13,7 @@ $(function() {
 	
 	$('.vbo-views-form legend a').click();
 	
-	$('.views-field-filesize').addClass('clickable').click(function() {
-		var row = $(this);
- 		$(this).next().toggle();
-	});
-
+	$('.views-field-filesize').addClass('clickable');
 });
 
 })(jQuery);
