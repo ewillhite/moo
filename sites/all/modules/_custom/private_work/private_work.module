@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Private Work feature.
+ */
+
+include_once 'private_work.features.inc';

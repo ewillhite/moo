@@ -12,6 +12,10 @@ $(function() {
 	});
 	
 	$('.vbo-views-form legend a').click();
+	
+	$('.vbo-select').click(function () {
+	    $('.vbo-views-form legend a').click();
+	});
 });
 
 })(jQuery);
