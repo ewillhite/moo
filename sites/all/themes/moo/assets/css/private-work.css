@@ -24,7 +24,8 @@
 .hidden {
   background-color: #eee;
   display: block;
-  padding: 2%; }
+  padding: 2%;
+  overflow: hidden; }
 
 .field-type-file {
   float: left;
@@ -113,7 +114,10 @@
   padding: .5% 2%;
   font-size: 1.1em;
   text-align: center;
-  width: 100%; }
+  width: 100%;
+  clear: both;
+  float: left;
+  margin-top: 11px; }
   @media screen and (min-width: 868px) {
     .download {
       width: auto; } }
