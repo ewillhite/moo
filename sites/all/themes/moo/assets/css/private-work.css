@@ -132,3 +132,6 @@
   .link span {
     background-color: #fff;
     padding: 8px; }
+
+input[type="text"] {
+  max-width: 76%; }
