@@ -58,9 +58,6 @@
       }
     }
   }
-  ul {
-    margin-top: 35px;
-  }
 }
 .arrow, .fieldset-legend span.summary {
     border: 8px solid #aaa;
@@ -126,4 +123,7 @@ input[type="text"] {
 }
 .admin-menu .vbo-views-form #edit-select, .admin-menu .views-field-filesize tr td:first-child {
     display: block;
+}
+.admin-menu .view-private-work ul {
+  margin-top: 35px;
 }
