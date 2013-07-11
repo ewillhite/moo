@@ -135,3 +135,9 @@
 
 input[type="text"] {
   max-width: 76%; }
+
+.vbo-views-form #edit-select, .views-field-filesize tr td:first-child {
+  display: none; }
+
+.admin-menu .vbo-views-form #edit-select, .admin-menu .views-field-filesize tr td:first-child {
+  display: block; }
