@@ -118,6 +118,6 @@ function seven_css_alter(&$css) {
 }
 
 /* Moo Specific Form Alter */
-function seven_form_alter(&$form, &$form_state, $form_id) {
-  dsm($form);
+function seven_form_content_access_page_alter(&$form, &$form_state, $form_id) {
+  $form['per_role']['#collapsed'] = TRUE;
 }
