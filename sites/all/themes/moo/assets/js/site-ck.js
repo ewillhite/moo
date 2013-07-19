@@ -1,1 +1,1 @@
-(function(e){e(function(){e(".media-vimeo-video").fitVids();e("body:after").css(!1)&&alert("hello")})})(jQuery);
+(function(e){function t(){var t=e(window).scrollTop();e(".bg-one, .bg-two").css("top",-(t*.4)+"px")}e(function(){e(".media-vimeo-video").fitVids();e("header figure").css("float")==="left"&&e(window).scroll(function(e){t()})})})(jQuery);

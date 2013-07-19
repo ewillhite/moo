@@ -33,7 +33,7 @@ stylesheets[all][] = assets/css/style.css
 
 ;-------------- JS -------------
 scripts[] = assets/js/jquery.fitvids.js
-scripts[] = assets/js/site.js
+scripts[] = assets/js/site-ck.js
 
 ;-------------- Default Mothership Settings  -------------
 settings[mothership_rebuild_registry] = 0

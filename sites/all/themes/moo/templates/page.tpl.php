@@ -10,6 +10,8 @@
 
 <?php print $mothership_poorthemers_helper; ?>
 
+<div class="bg-one"></div>
+<div class="bg-two"></div>
 <div class="wrap">
   <header role="banner">
     <figure>

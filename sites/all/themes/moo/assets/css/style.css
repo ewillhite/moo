@@ -39,8 +39,14 @@ html, body {
   margin: 0 auto -416px;
   /* the bottom margin is the negative value of the footer's height */ }
 
-html:before {
-  content: "";
+body {
+  background: url(../images/bg.jpg) repeat-y scroll 0 0 black;
+  color: #adadad;
+  font: 1em/1.3em Arial, sans-serif;
+  font-size: 100%;
+  line-height: 2em; }
+
+.bg-one {
   position: fixed;
   top: 0;
   left: 50%;
@@ -50,26 +56,19 @@ html:before {
   border-left-color: transparent;
   opacity: .6;
   z-index: -1;
-  margin-left: -620px; }
+  margin-left: -624px; }
 
-body {
-  background: url(../images/bg.jpg) repeat-y scroll 0 0 black;
-  color: #adadad;
-  font: 1em/1.3em Arial, sans-serif;
-  font-size: 100%;
-  line-height: 2em; }
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 50%;
-    z-index: -1;
-    margin-left: -804px;
-    border: 804px solid #4f4f4f;
-    border-bottom-color: transparent;
-    border-right-color: transparent;
-    border-left-color: transparent;
-    opacity: .6; }
+.bg-two {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: -1;
+  margin-left: -810px;
+  border: 804px solid #4f4f4f;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  opacity: .6; }
 
 /* - Typography Basics - from Gridless http://thatcoolguy.github.com/gridless-boilerplate/ */
 h1, h2, h3, h4, h5, h6 {
