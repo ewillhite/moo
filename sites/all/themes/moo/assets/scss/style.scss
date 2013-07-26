@@ -297,6 +297,9 @@ header {
 }
 
 /* Team Node */
+article.node-team {
+    overflow: hidden;
+}
 .node-type-team .post-content {
   margin: 6% 4%;
   @include media($tablet) {
