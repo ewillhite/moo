@@ -3,12 +3,11 @@
 $(function() {
 
   /* ----- Isotope Script ----- */
+  $('<li><a href="#" data-filter="*">#All</a></li>').prependTo('.filter');
   // cache container
   var $container = $('.isotope');
   // initialize isotope
-  $container.isotope({
-    // options...
-  });
+  $container.isotope();
 
   // filter items when filter link is clicked
   $('.filter a').click(function(){
