@@ -128,9 +128,9 @@
       width: 282px; }
       @media screen and (min-width: 868px) {
         .isotope .views-field-nothing a {
-          height: 212px;
-          padding: 125px 15px 0;
-          width: 368px; } }
+          height: 179px;
+          padding: 100px 15px 0;
+          width: 310px; } }
       .isotope .views-field-nothing a:hover {
         text-decoration: none; }
   .isotope .isotope-item {
@@ -141,4 +141,4 @@
       .isotope .isotope-item {
         margin: 0 1% 2%;
         height: 212px;
-        width: 325px; } }
+        width: 310px; } }
