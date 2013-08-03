@@ -19,20 +19,12 @@ $(function() {
   });
 
   /* end isotope */
-
-});
-
-Drupal.behaviors.mymoo = {
-  attach: function(context) {
-
-  // Show Child Info
   $('.isotope-item').hover(function() {
     $(this).children('.views-field-nothing').fadeIn('fast');
   }, function() {
     $(this).children('.views-field-nothing').fadeOut('fast');
   });
 
-  }
-};
+});
 
 })(jQuery);
