@@ -41,6 +41,10 @@ Drupal.behaviors.views_infinite_scroll = {
               load: function() {
                 $('div#views_infinite_scroll-ajax-loader').remove();
                 Drupal.attachBehaviors(this);
+                $new_elements = $(".isotope-element:not(.isotope-item)");
+                $(content_selector).imagesLoaded(function(){
+                  $(content_selector).isotope('appended', $new_elements);
+                });
               }
             });
 
