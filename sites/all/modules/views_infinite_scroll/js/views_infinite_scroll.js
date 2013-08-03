@@ -43,12 +43,13 @@ Drupal.behaviors.views_infinite_scroll = {
                 Drupal.attachBehaviors(this);
                 $new_elements = $(".isotope-element:not(.isotope-item)");
                 $(content_selector).imagesLoaded(function(){
-                  $(content_selector).isotope('appended', $new_elements);
-                });
-                $('.isotope-item').hover(function() {
-                  $(this).children('.views-field-nothing').fadeIn('fast');
-                }, function() {
-                  $(this).children('.views-field-nothing').fadeOut('fast');
+                  $(content_selector).isotope('appended', $new_elements, function() {
+                    $('.isotope-item').hover(function() {
+                      $(this).children('.views-field-nothing').fadeIn('fast');
+                    }, function() {
+                      $(this).children('.views-field-nothing').fadeOut('fast');
+                    });
+                  });
                 });
               }
             });
