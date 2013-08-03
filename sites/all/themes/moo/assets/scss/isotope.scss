@@ -58,8 +58,13 @@
 /* End: Recommended Isotope styles */
 
 /* Project View Specific */
-.view-id-videos > .item-list {
-    clear: both;
+.view-id-videos {
+  .more-link {
+    display: none;
+  }
+  > .item-list {
+      clear: both;
+  }
 }
 .view-project-taxonomy {
   .view-header {

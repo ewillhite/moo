@@ -62,6 +62,8 @@
 
 /* End: Recommended Isotope styles */
 /* Project View Specific */
+.view-id-videos .more-link {
+  display: none; }
 .view-id-videos > .item-list {
   clear: both; }
 
