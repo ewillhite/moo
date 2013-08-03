@@ -38,9 +38,8 @@ Drupal.behaviors.views_infinite_scroll = {
               start: function() {
                 $(img_location).after(img);
               },
-              load: function(content) {
+              load: function() {
                 $('div#views_infinite_scroll-ajax-loader').remove();
-                $(this).isotope( 'addItems', content )
                 Drupal.attachBehaviors(this);
               }
             });

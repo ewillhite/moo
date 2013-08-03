@@ -108,39 +108,39 @@
     background-color: #30a13f;
     font-weight: normal; }
 
-.isotope {
+.item-list .isotope {
   clear: both; }
-  .isotope .views-field-nothing {
+  .item-list .isotope .views-field-nothing {
     background: url(../images/blue-bg.png);
     display: none;
     position: absolute;
     top: 0;
     left: 0;
     text-align: center; }
-    .isotope .views-field-nothing h3 {
+    .item-list .isotope .views-field-nothing h3 {
       color: #fff;
       margin-bottom: 10px; }
-    .isotope .views-field-nothing h4 {
+    .item-list .isotope .views-field-nothing h4 {
       color: #fff; }
-    .isotope .views-field-nothing a {
+    .item-list .isotope .views-field-nothing a {
       color: #fff;
       display: block;
       height: 162px;
       padding: 82px 15px 0;
       width: 282px; }
       @media screen and (min-width: 868px) {
-        .isotope .views-field-nothing a {
+        .item-list .isotope .views-field-nothing a {
           height: 179px;
           padding: 100px 15px 0;
           width: 310px; } }
-      .isotope .views-field-nothing a:hover {
+      .item-list .isotope .views-field-nothing a:hover {
         text-decoration: none; }
-  .isotope .isotope-item {
+  .item-list .isotope .isotope-item {
     margin: 0 1% 4%;
     height: 162px;
     width: 282px; }
     @media screen and (min-width: 868px) {
-      .isotope .isotope-item {
+      .item-list .isotope .isotope-item {
         margin: 0 1% 1%;
         height: 212px;
         width: 310px; } }
