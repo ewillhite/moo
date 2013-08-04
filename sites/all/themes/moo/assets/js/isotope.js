@@ -6,15 +6,15 @@ $(function() {
   $('<li><a href="#" data-filter="*">#All</a></li>').prependTo('.filter');
 
   // filter items when filter link is clicked
-  // $('.filter a').click(function(){
-  //   var selector = $(this).attr('data-filter');
-  //   $('.filter a').removeClass('active');
-  //   $(this).addClass('active');
-  //   $.autopager('load');
-  //   Drupal.attachBehaviors('.isotope');
-  //   $container.isotope({ filter: selector });
-  //   return false;
-  // });
+  $('.filter a').click(function(){
+    var selector = $(this).attr('data-filter');
+    $('.filter a').removeClass('active');
+    $(this).addClass('active');
+    $.autopager('load');
+    Drupal.attachBehaviors('.isotope');
+    $container.isotope({ filter: selector });
+    return false;
+  });
 
   /* end isotope */
   $('.isotope-item').hover(function() {
@@ -29,9 +29,9 @@ Drupal.behaviors.isotope = {
   attach: function(context) {
 
   // cache container
-  var $container = $('.isotope');
+  var iso_container = $('.isotope');
   // initialize isotope
-  $container.isotope();
+  iso_container.isotope();
 
   }
 };
