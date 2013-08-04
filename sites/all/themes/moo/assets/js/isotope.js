@@ -11,14 +11,11 @@ $(function() {
 
   // filter items when filter link is clicked
   $('.filter a').click(function(){
-    var filtera = $(this);
-    var selector = $(filtera).attr('data-filter');
-    $.autopager.load(function() {
-      console.log(filtera);
-      $container.isotope({ filter: selector });
-      $('.filter a').removeClass('active');
-      $(filtera).addClass('active');
-    });
+    var selector = $(this).attr('data-filter');
+    $('.filter a').removeClass('active');
+    $(this).addClass('active');
+    $.autopager.load();
+    $container.isotope({ filter: selector });
     return false;
   });
 
