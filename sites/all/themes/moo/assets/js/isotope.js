@@ -11,11 +11,13 @@ $(function() {
 
   // filter items when filter link is clicked
   $('.filter a').click(function(){
-    var selector = $(this).attr('data-filter');
-    $('.filter a').removeClass('active');
-    $(this).addClass('active');
-    $container.isotope({ filter: selector });
-    Drupal.attachBehaviors('.view-id-videos')
+    var filtera = $(this);
+    var selector = $(filtera).attr('data-filter');
+    $.autopager('load', function() {
+      $('.filter a').removeClass('active');
+      $(filtera).addClass('active');
+      $container.isotope({ filter: selector });
+    });
     return false;
   });
 
