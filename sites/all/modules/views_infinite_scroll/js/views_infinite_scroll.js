@@ -38,13 +38,13 @@ Drupal.behaviors.views_infinite_scroll = {
               start: function() {
                 $(img_location).after(img);
               },
-              load: function() {
+              load: function(selector) {
                 $('div#views_infinite_scroll-ajax-loader').remove();
                 Drupal.attachBehaviors(this);
                 $new_elements = $(".isotope-element:not(.isotope-item)");
                 $(content_selector).imagesLoaded(function(){
                   $(content_selector).isotope('appended', $new_elements, function() {
-                    $container.isotope({ filter: selector });
+                    $this.isotope({ filter: selector });
                     $('.isotope-item').hover(function() {
                       $(this).children('.views-field-nothing').fadeIn('fast');
                     }, function() {
