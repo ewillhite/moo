@@ -62,10 +62,6 @@ Drupal.behaviors.views_infinite_scroll = {
                 last = $(items_selector).filter(':last');
                 handle.autopager('load');
               }
-              else if($('.isotope li').length < 4) {
-                last = $(items_selector).filter(':last');
-                handle.autopager('load');
-              }
               else {
                 break;
               }
