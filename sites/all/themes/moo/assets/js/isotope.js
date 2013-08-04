@@ -16,9 +16,8 @@ $(function() {
     $(this).addClass('active');
     $container.isotope({ filter: selector }, function() {
       $.autopager('load');
-      console.log(selector);
-      $container.isotope({ filter: selector });
     });
+    $container.isotope({ filter: selector });
     return false;
   });
 
