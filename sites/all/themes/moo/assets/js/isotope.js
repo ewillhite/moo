@@ -5,18 +5,6 @@ $(function() {
   /* ----- Isotope Script ----- */
   $('<li><a href="#" data-filter="*">#All</a></li>').prependTo('.filter');
 
-  /* end isotope */
-  $('.isotope-item').hover(function() {
-    $(this).children('.views-field-nothing').fadeIn('fast');
-  }, function() {
-    $(this).children('.views-field-nothing').fadeOut('fast');
-  });
-
-});
-
-Drupal.behaviors.isotope = {
-  attach: function(context) {
-
   // cache container
   var iso_container = $('.isotope');
   // initialize isotope
@@ -31,6 +19,18 @@ Drupal.behaviors.isotope = {
     $.autopager('load');
     return false;
   });
+
+  /* end isotope */
+  $('.isotope-item').hover(function() {
+    $(this).children('.views-field-nothing').fadeIn('fast');
+  }, function() {
+    $(this).children('.views-field-nothing').fadeOut('fast');
+  });
+
+});
+
+Drupal.behaviors.isotope = {
+  attach: function(context) {
 
   }
 };
