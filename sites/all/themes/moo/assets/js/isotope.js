@@ -15,7 +15,7 @@ $(function() {
     $('.filter a').removeClass('active');
     $(this).addClass('active');
     $container.isotope({ filter: selector });
-    Drupal.attachBehaviors(container);
+    Drupal.attachBehaviors('.view-id-videos');
     return false;
   });
 
