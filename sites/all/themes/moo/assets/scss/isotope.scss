@@ -126,12 +126,17 @@
       width: 282px;
       @include media($tablet) {
         height: 179px;
-        padding: 100px 15px 0;
+        padding: 27px 15px 10px;
         width: 310px;
+        display: table-cell;
+        vertical-align: bottom;
       }
       &:hover {
         text-decoration: none;
       }
+    }
+    p {
+      line-height: 1.2em;
     }
   }
   .isotope-item {

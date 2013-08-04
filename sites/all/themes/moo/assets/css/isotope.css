@@ -133,10 +133,14 @@
       @media screen and (min-width: 868px) {
         .item-list .isotope .views-field-nothing a {
           height: 179px;
-          padding: 100px 15px 0;
-          width: 310px; } }
+          padding: 27px 15px 10px;
+          width: 310px;
+          display: table-cell;
+          vertical-align: bottom; } }
       .item-list .isotope .views-field-nothing a:hover {
         text-decoration: none; }
+    .item-list .isotope .views-field-nothing p {
+      line-height: 1.2em; }
   .item-list .isotope .isotope-item {
     margin: 0 1% 4%;
     height: 162px;
