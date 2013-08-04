@@ -38,7 +38,7 @@ Drupal.behaviors.views_infinite_scroll = {
               start: function() {
                 $(img_location).after(img);
               },
-              load: function(selector) {
+              load: function() {
                 $('div#views_infinite_scroll-ajax-loader').remove();
                 Drupal.attachBehaviors(this);
                 $new_elements = $(".isotope-element:not(.isotope-item)");
