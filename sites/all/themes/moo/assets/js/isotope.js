@@ -10,9 +10,8 @@ $(function() {
     var selector = $(this).attr('data-filter');
     $('.filter a').removeClass('active');
     $(this).addClass('active');
-    $.autopager('load');
-    Drupal.attachBehaviors('.isotope');
     $container.isotope({ filter: selector });
+    $.autopager('load');
     return false;
   });
 
