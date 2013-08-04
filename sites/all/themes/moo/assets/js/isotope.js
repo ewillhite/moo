@@ -14,8 +14,8 @@ $(function() {
     var selector = $(this).attr('data-filter');
     $('.filter a').removeClass('active');
     $(this).addClass('active');
-    $container.isotope({ filter: selector });
     Drupal.attachBehaviors('.view-id-videos');
+    $container.isotope({ filter: selector });
     return false;
   });
 
