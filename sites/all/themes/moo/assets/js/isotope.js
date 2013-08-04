@@ -15,10 +15,9 @@ $(function() {
     var selector = $(this).attr('data-filter');
     $('.filter a').removeClass('active');
     $(this).addClass('active');
-    $.autopager('load');
-    return false;
-  }, function() {
+    $.autopager('load').delay(100);
     iso_container.isotope({ filter: selector });
+    return false;
   });
 
   /* end isotope */
