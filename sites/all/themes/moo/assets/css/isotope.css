@@ -149,3 +149,7 @@
 
 .view-empty {
   clear: both; }
+
+.page-work .view-project-taxonomy ul a {
+  margin: 0 2px 10px 0;
+  padding: 0px 7px; }
