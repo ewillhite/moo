@@ -4,10 +4,6 @@ $(function() {
 
   /* ----- Isotope Script ----- */
   $('<li><a href="#" data-filter="*">#All</a></li>').prependTo('.filter');
-  // cache container
-  var $container = $('.isotope');
-  // initialize isotope
-  $container.isotope();
 
   // filter items when filter link is clicked
   $('.filter a').click(function(){
@@ -15,6 +11,7 @@ $(function() {
     $('.filter a').removeClass('active');
     $(this).addClass('active');
     $.autopager('load');
+    Drupal.attachBehaviors('.isotope');
     $container.isotope({ filter: selector });
     return false;
   });
@@ -27,5 +24,16 @@ $(function() {
   });
 
 });
+
+Drupal.behaviors.isotope = {
+  attach: function(context) {
+
+  // cache container
+  var $container = $('.isotope');
+  // initialize isotope
+  $container.isotope();
+
+  }
+};
 
 })(jQuery);
