@@ -14,8 +14,8 @@ $(function() {
     var selector = $(this).attr('data-filter');
     $('.filter a').removeClass('active');
     $(this).addClass('active');
-    $.autopager('load', function() {
-      $container.isotope({ filter: selector });
+    $container.isotope({ filter: selector }, function() {
+      alert('hello');
     });
     return false;
   });
