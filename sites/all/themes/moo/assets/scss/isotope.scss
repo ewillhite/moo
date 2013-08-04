@@ -92,8 +92,8 @@
     padding: 0 7px;
     @include media($tablet) {
       font-size: .9em;
-      margin: 0 12px 10px 0;
-      padding: 2px 12px;
+      margin: 0 6px 10px 0;
+      padding: 0px 8px;
     }
     background-color: #949494;
     &.active, &:hover {
@@ -144,4 +144,7 @@
       width: 310px;
     }
   }
+}
+.view-empty {
+  clear: both;
 }
