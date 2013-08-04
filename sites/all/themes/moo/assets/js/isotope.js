@@ -11,7 +11,7 @@ $(function() {
 
   // filter items when filter link is clicked
   $('.filter a').click(function(){
-    // $.autopager.load();
+    $.autopager.load();
     var selector = $(this).attr('data-filter');
     $container.isotope({ filter: selector });
     $('.filter a').removeClass('active');
