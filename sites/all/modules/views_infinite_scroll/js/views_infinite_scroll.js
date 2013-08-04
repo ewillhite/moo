@@ -44,8 +44,6 @@ Drupal.behaviors.views_infinite_scroll = {
                 $new_elements = $(".isotope-element:not(.isotope-item)");
                 $(content_selector).imagesLoaded(function(){
                   $(content_selector).isotope('appended', $new_elements, function() {
-                    console.log(selector);
-                    $(this).isotope({ filter: selector });
                     $('.isotope-item').hover(function() {
                       $(this).children('.views-field-nothing').fadeIn('fast');
                     }, function() {

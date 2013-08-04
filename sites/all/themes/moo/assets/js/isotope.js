@@ -15,7 +15,7 @@ $(function() {
     $('.filter a').removeClass('active');
     $(this).addClass('active');
     $container.isotope({ filter: selector });
-    $.autopager('load');
+    Drupal.attachBehaviors(container);
     return false;
   });
 
