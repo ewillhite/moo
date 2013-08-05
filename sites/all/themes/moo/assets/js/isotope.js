@@ -15,8 +15,15 @@ $(function() {
     var selector = $(this).attr('data-filter');
     $('.filter a').removeClass('active');
     $(this).addClass('active');
-    $.autopager('load');
-    iso_container.isotope({ filter: selector });
+    iso_container.isotope({ filter: selector }, function() {
+      if ($('.isotope li').length < 3) {
+        var last = $('.isotope li').filter(':last');
+        if(last.offset().top + last.height() < $(document).scrollTop() + $(window).height()) {
+          last = $('.isotope li').filter(':last');
+          $.autopager('load');
+        }
+      }
+    });
     return false;
   });
 
