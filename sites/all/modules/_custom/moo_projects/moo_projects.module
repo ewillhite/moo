@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Moo Projects feature.
+ */
+
+include_once 'moo_projects.features.inc';
