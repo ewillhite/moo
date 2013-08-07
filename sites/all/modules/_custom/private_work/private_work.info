@@ -2,6 +2,7 @@ name = Private Work
 description = Private Work including content type and view
 core = 7.x
 package = moo
+php = 5.2.4
 version = 7.x-1.0
 project = private_work
 dependencies[] = amazons3

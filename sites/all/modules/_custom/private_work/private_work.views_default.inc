@@ -22,9 +22,13 @@ function private_work_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'My Moo';
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['access']['type'] = 'role';
+  $handler->display->display_options['access']['role'] = array(
+    2 => '2',
+  );
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['pure_distinct'] = TRUE;
@@ -37,6 +41,13 @@ function private_work_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['style_options']['wrapper_class'] = '';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = '<em>No videos have been assigned to your account.</em>';
+  $handler->display->display_options['empty']['area']['format'] = 'full_html';
   /* Relationship: Content: Full Download File (field_full_download_file:fid) */
   $handler->display->display_options['relationships']['field_full_download_file_fid']['id'] = 'field_full_download_file_fid';
   $handler->display->display_options['relationships']['field_full_download_file_fid']['table'] = 'field_data_field_full_download_file';
@@ -268,7 +279,7 @@ function private_work_views_default_views() {
   $handler->display->display_options['fields']['field_streaming_video_file']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_streaming_video_file']['alter']['text'] = '<div class="hidden">[field_streaming_video_file]
 [body]
-<a class="download" href="[uri]">Download</a>
+<a class="download" href="[uri]" download>Download</a>
 <div class="link">[path]</div></div>';
   $handler->display->display_options['fields']['field_streaming_video_file']['element_type'] = '0';
   $handler->display->display_options['fields']['field_streaming_video_file']['element_label_colon'] = FALSE;
@@ -278,8 +289,8 @@ function private_work_views_default_views() {
   $handler->display->display_options['fields']['field_streaming_video_file']['type'] = 'mediaelement_video';
   $handler->display->display_options['fields']['field_streaming_video_file']['settings'] = array(
     'controls' => 1,
-    'width' => '640',
-    'height' => '385',
+    'width' => '440',
+    'height' => '247',
     'download_link' => 0,
     'download_text' => 'Download',
   );
