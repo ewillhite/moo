@@ -408,20 +408,16 @@ footer {
 /* Contact Forms */
 .contact-page #main-content {
   overflow: hidden; }
-.contact-page .webform-client-form {
-  float: left;
-  width: 46%;
-  margin-right: 2%; }
-  .contact-page .webform-client-form .form-item > label {
-    display: block; }
-  .contact-page .webform-client-form input[type="text"], .contact-page .webform-client-form input[type="email"], .contact-page .webform-client-form textarea, .contact-page .webform-client-form .grippie {
-    width: 298px; }
+.contact-page .webform-client-form .form-item > label {
+  display: block; }
+.contact-page .webform-client-form input[type="text"], .contact-page .webform-client-form input[type="email"], .contact-page .webform-client-form textarea, .contact-page .webform-client-form .grippie {
+  width: 298px; }
 .contact-page input[type="submit"] {
   padding: 10px; }
 
 .block-webform-client-block-53, .block-webform-client-block-54 {
   float: left;
-  width: 48%; }
+  width: 45%; }
 
 .block-webform-client-block-53 {
-  margin-right: 2%; }
+  margin-right: 9%; }
