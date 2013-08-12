@@ -173,7 +173,7 @@ form small, form .description {
 .required {
   color: #000;
 }
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], input[type="email"] {
   border: 1px solid #7a7b7b;
   padding: 10px 34px 10px 10px;
   font-size: 1em;
@@ -376,6 +376,19 @@ footer {
       right: -4px;
     }
     z-index: -1;
+  }
+}
+
+/* Contact Forms */
+.contact-page .webform-client-form {
+  float: left;
+  width: 46%;
+  margin-right: 2%;
+  .form-item > label {
+    display: block;
+  }
+  input[type="text"], input[type="email"], textarea {
+    width: 298px;
   }
 }
 

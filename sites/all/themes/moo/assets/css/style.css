@@ -191,7 +191,7 @@ form small, form .description {
 .required {
   color: #000; }
 
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], input[type="email"] {
   border: 1px solid #7a7b7b;
   padding: 10px 34px 10px 10px;
   font-size: 1em;
@@ -404,3 +404,13 @@ footer {
     @media screen and (min-width: 868px) {
       footer .mootv {
         right: -4px; } }
+
+/* Contact Forms */
+.contact-page .webform-client-form {
+  float: left;
+  width: 46%;
+  margin-right: 2%; }
+  .contact-page .webform-client-form .form-item > label {
+    display: block; }
+  .contact-page .webform-client-form input[type="text"], .contact-page .webform-client-form input[type="email"], .contact-page .webform-client-form textarea {
+    width: 298px; }
