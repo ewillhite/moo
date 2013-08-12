@@ -381,7 +381,9 @@ footer {
 
 /* Contact Forms */
 .contact-page {
-  overflow: hidden;
+  #main-content {
+    overflow: hidden;
+  }
   .webform-client-form {
     float: left;
     width: 46%;
