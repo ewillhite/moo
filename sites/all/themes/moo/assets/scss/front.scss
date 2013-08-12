@@ -67,12 +67,13 @@ article {
  Content
 -------------------------------------*/
 .page {
-  margin: 9% 0;
+  margin: 9% 0 0;
 }
 #main-content {
   background-color: transparent;
   color: #fff;
   padding:0;
+  margin-bottom: 0;
 }
 .block-views-team-block-1  {
   background-color: #e4e4e4;
@@ -170,7 +171,7 @@ article {
   clear: both;
   padding: 16% 4% 0;
   @include media($tablet) {
-    padding: 8% 0;
+    padding: 8% 0 0;
   }
   .view-header {
     margin-bottom: 14px;

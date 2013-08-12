@@ -80,12 +80,13 @@ article {
  Content
 -------------------------------------*/
 .page {
-  margin: 9% 0; }
+  margin: 9% 0 0; }
 
 #main-content {
   background-color: transparent;
   color: #fff;
-  padding: 0; }
+  padding: 0;
+  margin-bottom: 0; }
 
 .block-views-team-block-1 {
   background-color: #e4e4e4;
@@ -131,7 +132,7 @@ article {
 
 .view-id-team:after {
   content: "";
-  border: 75px solid white;
+  border: 75px solid #fff;
   border-bottom-color: transparent;
   border-right-color: transparent;
   border-left-color: transparent;
@@ -191,6 +192,6 @@ article {
   padding: 16% 4% 0; }
   @media screen and (min-width: 868px) {
     .block-views-videos-block-2 {
-      padding: 8% 0; } }
+      padding: 8% 0 0; } }
   .block-views-videos-block-2 .view-header {
     margin-bottom: 14px; }
