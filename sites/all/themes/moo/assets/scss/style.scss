@@ -388,8 +388,11 @@ footer {
     .form-item > label {
       display: block;
     }
-    input[type="text"], input[type="email"], textarea, .grippie {
+    input[type="text"], input[type="email"] {
       width: 298px;
+    }
+    textarea {
+      height: 150px;
     }
   }
   input[type="submit"] {

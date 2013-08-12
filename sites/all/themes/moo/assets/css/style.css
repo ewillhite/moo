@@ -410,8 +410,10 @@ footer {
   overflow: hidden; }
 .contact-page .webform-client-form .form-item > label {
   display: block; }
-.contact-page .webform-client-form input[type="text"], .contact-page .webform-client-form input[type="email"], .contact-page .webform-client-form textarea, .contact-page .webform-client-form .grippie {
+.contact-page .webform-client-form input[type="text"], .contact-page .webform-client-form input[type="email"] {
   width: 298px; }
+.contact-page .webform-client-form textarea {
+  height: 150px; }
 .contact-page input[type="submit"] {
   padding: 10px; }
 
