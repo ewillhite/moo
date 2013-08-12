@@ -380,15 +380,28 @@ footer {
 }
 
 /* Contact Forms */
-.contact-page .webform-client-form {
+.contact-page {
+  overflow: hidden;
+  .webform-client-form {
+    float: left;
+    width: 46%;
+    margin-right: 2%;
+    .form-item > label {
+      display: block;
+    }
+    input[type="text"], input[type="email"], textarea, .grippie {
+      width: 298px;
+    }
+  }
+  input[type="submit"] {
+    padding: 10px;
+  }
+}
+.block-webform-client-block-53, .block-webform-client-block-54 {
   float: left;
-  width: 46%;
+  width: 48%;
+}
+.block-webform-client-block-53 {
   margin-right: 2%;
-  .form-item > label {
-    display: block;
-  }
-  input[type="text"], input[type="email"], textarea {
-    width: 298px;
-  }
 }
 
