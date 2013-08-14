@@ -28,6 +28,10 @@ function moo_views_pre_render(&$view) {
   }
 }
 
+// function moo_status_messages($vars) {
+
+// }
+
 /*
   Preprocess
 */

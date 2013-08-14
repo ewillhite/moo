@@ -29,6 +29,9 @@ html, body {
   min-height: 1000px;
   margin: 0 auto -416px; /* the bottom margin is the negative value of the footer's height */
 }
+.page-user-login .wrap {
+  min-height: 1150px;
+}
 body {
   background: url(../images/bg.jpg) repeat-y scroll 0 0 #000;
   color: #adadad;
@@ -213,22 +216,20 @@ input[type="submit"] {
 /* Nav gradient from #30a13f to #2a8c37; */
 header {
   figure {
-    margin: 4% 0 0;
     @include media($tablet) {
       float: left;
-      margin: 2% 0;
+      margin: 0 0 2%;
     }
     a {
-      @include sprite(0 -20px);
+      @include sprite(0 0);
       background-size: cover;
       margin: 0 auto;
       padding-top: 173px;
       width:263px;
       @include media($tablet) {
-        background-position: 0 -34px;
         background-size:auto;
         margin: 0;
-        padding-top: 147px;
+        padding-top: 184px;
         width: 363px;
       }
     }

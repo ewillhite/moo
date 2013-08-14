@@ -39,6 +39,9 @@ html, body {
   margin: 0 auto -416px;
   /* the bottom margin is the negative value of the footer's height */ }
 
+.page-user-login .wrap {
+  min-height: 1150px; }
+
 body {
   background: url(../images/bg.jpg) repeat-y scroll 0 0 black;
   color: #adadad;
@@ -250,29 +253,26 @@ input[type="submit"] {
  Header
 -------------------------------------*/
 /* Nav gradient from #30a13f to #2a8c37; */
-header figure {
-  margin: 4% 0 0; }
+@media screen and (min-width: 868px) {
+  header figure {
+    float: left;
+    margin: 0 0 2%; } }
+header figure a {
+  background: url(../images/sprite.png) no-repeat scroll 0 0;
+  background-position: 0 0;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  background-size: cover;
+  margin: 0 auto;
+  padding-top: 173px;
+  width: 263px; }
   @media screen and (min-width: 868px) {
-    header figure {
-      float: left;
-      margin: 2% 0; } }
-  header figure a {
-    background: url(../images/sprite.png) no-repeat scroll 0 0;
-    background-position: 0 -20px;
-    display: block;
-    height: 0;
-    overflow: hidden;
-    background-size: cover;
-    margin: 0 auto;
-    padding-top: 173px;
-    width: 263px; }
-    @media screen and (min-width: 868px) {
-      header figure a {
-        background-position: 0 -34px;
-        background-size: auto;
-        margin: 0;
-        padding-top: 147px;
-        width: 363px; } }
+    header figure a {
+      background-size: auto;
+      margin: 0;
+      padding-top: 184px;
+      width: 363px; } }
 
 .header-region {
   margin-top: -55px;
