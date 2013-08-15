@@ -1,0 +1,11 @@
+staging:
+  domain: "root@64.207.148.246"
+  deploy_to: "/var/www/vhosts/12southdev.com/moocreativemedia.12southdev.com"
+  repository: "git@github.com:ewillhite/moo.git"
+  branch: "master"
+
+# production:
+#   domain: "deployment_user@staging.mydomain.com"
+#   deploy_to: "/path/to/where/i/deploy/staging.mydomain.com"
+#   repository: "git@github.com:username/project.git"
+#   branch: "master"
