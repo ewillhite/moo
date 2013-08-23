@@ -340,6 +340,30 @@ article.node-team {
   font-size: 2em;
   color: #aaa; }
 
+/* Project Node */
+.node-video {
+  overflow: hidden; }
+  .node-video .field-type-taxonomy-term-reference .field-item {
+    color: #fff;
+    display: inline-block;
+    padding: 2px 12px;
+    margin-right: 12px;
+    -webkit-transform: skew(-10deg, 0);
+    -moz-transform: skew(-10deg, 0);
+    -ms-transform: skew(-10deg, 0);
+    -o-transform: skew(-10deg, 0);
+    transform: skew(-10deg, 0);
+    background-color: #bebebe;
+    float: left;
+    margin: 10px 0 0 7px; }
+    .node-video .field-type-taxonomy-term-reference .field-item span {
+      display: inline-block;
+      -webkit-transform: skew(10deg, 0);
+      -moz-transform: skew(10deg, 0);
+      -ms-transform: skew(10deg, 0);
+      -o-transform: skew(10deg, 0);
+      transform: skew(10deg, 0); }
+
 /* ------------------------------------
  Footer
 -------------------------------------*/

@@ -310,6 +310,18 @@ article.node-team {
     color: #aaa;
   }
 }
+/* Project Node */
+.node-video {
+  overflow: hidden;
+  .field-type-taxonomy-term-reference {
+    .field-item {
+      @include skew;
+      background-color: #bebebe;
+      float: left;
+      margin: 10px 0 0 7px;
+    }
+  }
+}
 /* ------------------------------------
  Footer
 -------------------------------------*/
