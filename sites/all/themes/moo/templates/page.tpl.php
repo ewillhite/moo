@@ -70,7 +70,6 @@
       </div>
     <?php endif; ?>
   </div><!--/page-->
-  <div class="push"></div>
 </div><!--/wrap-->
 
 <div class="footer-wrap">
