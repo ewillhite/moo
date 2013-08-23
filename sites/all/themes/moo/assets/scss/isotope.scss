@@ -132,14 +132,29 @@
       color: #fff;
       display: block;
       height: 162px;
-      padding: 82px 15px 0;
-      width: 282px;
+      padding: 28px 15px 0;
+      width: 264px;
+      @media screen and (min-width: 768px) {
+        height: 202px;
+        padding: 91px 15px 0;
+        width: 350px;
+      }
       @include media($tablet) {
         height: 179px;
         padding: 27px 15px 10px;
         width: 310px;
         display: table-cell;
         vertical-align: bottom;
+      }
+      @media screen and (min-width: 1024px) {
+        height: 167px;
+        padding: 27px 15px 10px;
+        width: 290px;
+      }
+      @include media($desktop) {
+        height: 179px;
+        padding: 27px 15px 10px;
+        width: 310px;
       }
       &:hover {
         text-decoration: none;
@@ -153,8 +168,20 @@
     margin: 0 1% 4%;
     height: 162px;
     width: 282px;
-    @include media($tablet) {
+    @media screen and (min-width: 768px) {
       margin: 0 1% 1%;
+      height: 250px;
+      width: 350px;
+    }
+    @include media($tablet) {
+      height: 212px;
+      width: 310px;
+    }
+    @media screen and (min-width: 768px) {
+      height:195px;
+      width: 290px;
+    }
+    @include media($desktop) {
       height: 212px;
       width: 310px;
     }

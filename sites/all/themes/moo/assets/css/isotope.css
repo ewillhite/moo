@@ -135,8 +135,13 @@
       color: #fff;
       display: block;
       height: 162px;
-      padding: 82px 15px 0;
-      width: 282px; }
+      padding: 28px 15px 0;
+      width: 264px; }
+      @media screen and (min-width: 768px) {
+        .item-list .isotope .views-field-nothing a {
+          height: 202px;
+          padding: 91px 15px 0;
+          width: 350px; } }
       @media screen and (min-width: 868px) {
         .item-list .isotope .views-field-nothing a {
           height: 179px;
@@ -144,6 +149,16 @@
           width: 310px;
           display: table-cell;
           vertical-align: bottom; } }
+      @media screen and (min-width: 1024px) {
+        .item-list .isotope .views-field-nothing a {
+          height: 167px;
+          padding: 27px 15px 10px;
+          width: 290px; } }
+      @media screen and (min-width: 1095px) {
+        .item-list .isotope .views-field-nothing a {
+          height: 179px;
+          padding: 27px 15px 10px;
+          width: 310px; } }
       .item-list .isotope .views-field-nothing a:hover {
         text-decoration: none; }
     .item-list .isotope .views-field-nothing p {
@@ -152,9 +167,21 @@
     margin: 0 1% 4%;
     height: 162px;
     width: 282px; }
-    @media screen and (min-width: 868px) {
+    @media screen and (min-width: 768px) {
       .item-list .isotope .isotope-item {
         margin: 0 1% 1%;
+        height: 250px;
+        width: 350px; } }
+    @media screen and (min-width: 868px) {
+      .item-list .isotope .isotope-item {
+        height: 212px;
+        width: 310px; } }
+    @media screen and (min-width: 768px) {
+      .item-list .isotope .isotope-item {
+        height: 195px;
+        width: 290px; } }
+    @media screen and (min-width: 1095px) {
+      .item-list .isotope .isotope-item {
         height: 212px;
         width: 310px; } }
 

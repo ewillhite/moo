@@ -329,10 +329,10 @@ article.node-team {
 .footer-wrap {
   clear: both;
   background:url(../images/grass.png) repeat-x scroll bottom center;
-  height: 416px;
   overflow: hidden;
   padding-bottom: 70px;
   @include media($tablet) {
+    height: 416px;
     padding-top:70px;
     padding-bottom:0;
   }

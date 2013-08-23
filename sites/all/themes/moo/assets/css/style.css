@@ -370,12 +370,12 @@ article.node-team {
 .footer-wrap {
   clear: both;
   background: url(../images/grass.png) repeat-x scroll bottom center;
-  height: 416px;
   overflow: hidden;
   padding-bottom: 70px;
   width: 100%; }
   @media screen and (min-width: 868px) {
     .footer-wrap {
+      height: 416px;
       padding-top: 70px;
       padding-bottom: 0; } }
 
