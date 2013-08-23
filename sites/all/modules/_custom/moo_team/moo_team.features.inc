@@ -38,6 +38,7 @@ function moo_team_image_default_styles() {
   // Exported image style: 368x212.
   $styles['368x212'] = array(
     'name' => '368x212',
+    'label' => '368x212',
     'effects' => array(
       2 => array(
         'label' => 'Scale and crop',

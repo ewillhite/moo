@@ -34,6 +34,7 @@ function moo_projects_image_default_styles() {
   // Exported image style: 368x212_manual.
   $styles['368x212_manual'] = array(
     'name' => '368x212_manual',
+    'label' => '368x212_manual',
     'effects' => array(
       3 => array(
         'label' => 'Crop and scale manually',
