@@ -110,6 +110,13 @@
     background-color: #30a13f;
     font-weight: normal; }
 
+.no-js .view-videos {
+  overflow: hidden; }
+.no-js .item-list .isotope-element {
+  float: left;
+  width: 310px;
+  margin: 0 15px; }
+
 .item-list .isotope {
   clear: both; }
   .item-list .isotope .views-field-nothing {
@@ -162,10 +169,3 @@
   opacity: 0; }
 .js .isotope-item {
   opacity: 1; }
-
-.no-js .view-videos {
-  overflow: hidden; }
-.no-js .item-list .isotope-element {
-  float: left;
-  width: 310px;
-  margin: 0 15px; }
