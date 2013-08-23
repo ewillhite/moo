@@ -27,21 +27,6 @@ font-family: 'Merriweather', serif;
  General defaults
 -------------------------------------*/
 /* Sticky Footer */
-* {
-  margin: 0; }
-
-html, body {
-  height: 100%; }
-
-.wrap {
-  height: 100%;
-  min-height: 1000px;
-  margin: 0 auto -416px;
-  /* the bottom margin is the negative value of the footer's height */ }
-
-.page-user-login .wrap {
-  min-height: 1150px; }
-
 body {
   background: url(../images/bg.jpg) repeat-y scroll 0 0 black;
   color: #adadad;
@@ -358,12 +343,10 @@ article.node-team {
 /* ------------------------------------
  Footer
 -------------------------------------*/
-@media screen and (min-width: 868px) {
-  .footer-wrap, .push {
-    height: 416px; } }
 .footer-wrap {
   clear: both;
   background: url(../images/grass.png) repeat-x scroll bottom center;
+  height: 416px;
   overflow: hidden;
   padding-bottom: 70px;
   width: 100%; }
