@@ -209,7 +209,7 @@ header {
     a {
       @include sprite(0 0);
       background-size: cover;
-      margin: 0 auto;
+      margin: 0 auto 20px;
       padding-top: 173px;
       width:263px;
       @include media($tablet) {

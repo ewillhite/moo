@@ -249,7 +249,7 @@ header figure a {
   height: 0;
   overflow: hidden;
   background-size: cover;
-  margin: 0 auto;
+  margin: 0 auto 20px;
   padding-top: 173px;
   width: 263px; }
   @media screen and (min-width: 868px) {
