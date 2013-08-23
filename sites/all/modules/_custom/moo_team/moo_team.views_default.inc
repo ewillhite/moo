@@ -37,6 +37,8 @@ function moo_team_views_default_views() {
   $handler->display->display_options['fields']['term_node_tid']['field'] = 'term_node_tid';
   $handler->display->display_options['fields']['term_node_tid']['label'] = '';
   $handler->display->display_options['fields']['term_node_tid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['term_node_tid']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['term_node_tid']['alter']['text'] = 'tid-[term_node_tid-tid]';
   $handler->display->display_options['fields']['term_node_tid']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['term_node_tid']['link_to_taxonomy'] = FALSE;
   $handler->display->display_options['fields']['term_node_tid']['vocabularies'] = array(

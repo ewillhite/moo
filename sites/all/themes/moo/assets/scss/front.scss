@@ -165,6 +165,7 @@ article {
   li {
       background-color: #bebebe;
       @include skew;
+      margin-bottom: 10px;
   }
 }
 .block-views-videos-block-2 {

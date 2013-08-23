@@ -178,7 +178,8 @@ article {
   -moz-transform: skew(-10deg, 0);
   -ms-transform: skew(-10deg, 0);
   -o-transform: skew(-10deg, 0);
-  transform: skew(-10deg, 0); }
+  transform: skew(-10deg, 0);
+  margin-bottom: 10px; }
   .views-field-field-team-category ol li span {
     display: inline-block;
     -webkit-transform: skew(10deg, 0);
