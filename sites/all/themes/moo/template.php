@@ -9,7 +9,7 @@ if (drupal_is_front_page()) {
 // Views Pre-Render Function
 function moo_views_pre_render(&$view) {
   if($view->name == 'videos') {
-    if ($view->current_display == 'block_2' || $view->current_display == 'videos_page') {
+    if ($view->current_display == 'block_3' || $view->current_display == 'block_2' || $view->current_display == 'videos_page') {
       drupal_add_css(drupal_get_path('theme', 'moo') .'/assets/css/isotope.css', array('group' => CSS_THEME));
       drupal_add_js(drupal_get_path('theme', 'moo') .'/assets/js/jquery.isotope.min.js');
       drupal_add_js(drupal_get_path('theme', 'moo') .'/assets/js/isotope-ck.js');

@@ -29,9 +29,9 @@ function moo_team_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-videos-block_2' => array(
+        'views-videos-block_3' => array(
           'module' => 'views',
-          'delta' => 'videos-block_2',
+          'delta' => 'videos-block_3',
           'region' => 'post_content',
           'weight' => '-10',
         ),
