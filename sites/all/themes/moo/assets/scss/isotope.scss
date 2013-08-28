@@ -152,9 +152,9 @@
         width: 290px;
       }
       @include media($desktop) {
-        height: 187px;
+        height: 179px;
         padding: 27px 15px 10px;
-        width: 325px;
+        width: 310px;
       }
       &:hover {
         text-decoration: none;
@@ -182,8 +182,8 @@
       width: 290px;
     }
     @include media($desktop) {
-      height: 220px;
-      width: 325px;
+      height: 212px;
+      width: 310px;
     }
   }
 }
