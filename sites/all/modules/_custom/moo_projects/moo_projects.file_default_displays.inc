@@ -108,8 +108,8 @@ function moo_projects_file_default_displays() {
   $file_display->weight = 0;
   $file_display->status = TRUE;
   $file_display->settings = array(
-    'width' => '',
-    'height' => '',
+    'width' => '1088',
+    'height' => '611',
     'color' => '',
     'protocol' => 'http://',
     'autoplay' => 0,

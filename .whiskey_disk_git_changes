@@ -1,1 +1,6 @@
-sites/all/themes/moo/assets/images/sprite.png
+sites/all/modules/_custom/moo_projects/moo_projects.views_default.inc
+sites/all/modules/_custom/moo_team/moo_team.context.inc
+sites/all/themes/moo/assets/css/isotope.css
+sites/all/themes/moo/assets/scss/isotope.scss
+sites/all/themes/moo/template.php
+sites/all/themes/moo/templates/views-view--videos--block-3.tpl.php
