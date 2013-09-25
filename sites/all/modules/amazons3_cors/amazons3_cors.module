@@ -36,6 +36,7 @@ function amazons3_cors_element_info() {
     // uploaded.
     '#upload_location' => '',
     '#size' => 22,
+    '#s3_acl' => 'private',
     '#extended' => FALSE,
     '#attached' => array(
       'js' => array(
@@ -67,13 +68,38 @@ function amazons3_cors_field_widget_info() {
     'amazons3_cors' => array(
       'label' => t('S3 CORS File Upload'),
       'field types' => array('file'),
-      'settings' => array(),
+      'settings' => array(
+        's3_acl' => 'private',
+      ),
       'behaviors' => array(
         'multiple values' => FIELD_BEHAVIOR_CUSTOM,
         'default value' => FIELD_BEHAVIOR_NONE,
       ),
     ),
   );
+}
+
+/**
+ * Implements hook_field_widget_settings_form().
+ */
+function amazons3_cors_field_widget_settings_form($field, $instance) {
+  $widget = $instance['widget'];
+  $settings = $widget['settings'];
+
+  if ($widget['type'] == 'amazons3_cors') {
+    $form = array();
+    // Allow administrators to choose ACL permissions for objects created in
+    // S3 via this upload widget.
+    $form['s3_acl'] = array(
+      '#type' => 'select',
+      '#title' => t('ACL'),
+      '#description' => t('In addition to whatever options you select here the object owner will always be granted full control of all objects. See the <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/ACLOverview.html">API documentation</a> for more information.'),
+      '#options' => _amazons3_cors_acl_options(),
+      '#default_value' => isset($settings['s3_acl']) ? $settings['s3_acl'] : '',
+    );
+  }
+
+  return $form;
 }
 
 /**
@@ -121,6 +147,7 @@ function amazons3_cors_field_widget_form(&$form, &$form_state, $field, $instance
     '#upload_validators' => file_field_widget_upload_validators($field, $instance),
     '#value_callback' => 'amazons3_cors_field_widget_value',
     '#process' => array_merge($element_info['#process'], array('file_field_widget_process')),
+    '#s3_acl' => $instance['widget']['settings']['s3_acl'],
     //'#progress_indicator' => $instance['widget']['settings']['progress_indicator'],
     // Allows this field to return an array instead of a single value.
     '#extended' => TRUE,
@@ -243,6 +270,11 @@ function amazons3_cors_upload_process($element, &$form_state, &$form) {
     $form['#' . $element['upload_button']['#name'] . '_location'] = $element['#upload_location'];
   }
 
+  // Do the same thing for ACL settings.
+  if (isset($element['#s3_acl'])) {
+    $form['#' . $element['upload_button']['#name'] . '_s3_acl'] = $element['#s3_acl'];
+  }
+
   if ($fid && $element['#file']) {
     $element['filelink'] = array(
       '#type' => 'markup',
@@ -329,7 +361,7 @@ function amazons3_cors_upload_value(&$element, $input = FALSE, $form_state = NUL
     $file->filename = $input['filename'];
     $file->filesize = $input['filesize'];
     $file->filemime = $input['filemime'];
-    $base_dir = !empty($element['#upload_location']) ? str_replace('s3://', '', $element['#upload_location']) . '/' : '';
+    $base_dir = (!empty($element['#upload_location']) && $element['#upload_location'] != 's3://') ? str_replace('s3://', '', $element['#upload_location']) . '/' : '';
     $file->uri = 's3://' . $base_dir . $file->filename;
     $file->status = 0;
     $file->timestamp = REQUEST_TIME;
@@ -490,6 +522,8 @@ function amazons3_cors_sign_request() {
     $base_dir = str_replace('s3://', '', $form['#' . $triggering_element . '_location']);
   }
 
+  $acl = isset($form['#' . $triggering_element . '_s3_acl']) ? $form['#' . $triggering_element . '_s3_acl'] : 'private';
+
   if (!libraries_load('awssdk')) {
     $error = t('Unable to load the AWS SDK. Please check you have installed the library correctly and configured your S3 credentials.');
     // @todo: How do you send an ajax error?
@@ -509,9 +543,9 @@ function amazons3_cors_sign_request() {
     $opts = array(
       'key' => !empty($base_dir) ? $base_dir . '/' . $filename : $filename,
       'Content-Type' => '^' . $filemime,
-      // @todo: make this configurable.
-      'acl' => 'private',
+      'acl' => $acl,
     );
+
     // @todo: make this configurable.
     $expires = '+5 minutes';
     $params = $s3->generate_upload_parameters($bucket, $expires, $opts);
@@ -524,4 +558,30 @@ function amazons3_cors_sign_request() {
   drupal_add_http_header('Content-Type', 'application/json; charset=utf-8');
   print json_encode($params);
   exit;
+}
+
+/**
+ * Get an array of ACL options and human readable descriptions.
+ *
+ * More information about ACL options:
+ * http://docs.aws.amazon.com/AmazonS3/latest/dev/ACLOverview.html
+ *
+ * Also see the constants defined in s3.class.php.
+ *
+ * @return array
+ *   An array of possible ACL property values for use when creating a new
+ *   object in S3. ACL settings determine what permissions a new object should
+ *   have.
+ */
+function _amazons3_cors_acl_options() {
+  // Options are taken from here:
+  // http://docs.aws.amazon.com/AmazonS3/latest/dev/ACLOverview.html
+  return array(
+    'private' => t('No one else has access. (private)'),
+    'public-read' => t('All users get READ access. (public-read)'),
+    'public-read-write' => t('All users get READ & WRITE access. Not recommended. (public-read-write)'),
+    'authenticated-read' => t('Authenticated users get READ access. (authenticated-read)'),
+    'bucket-owner-read' => t('Bucket owner gets READ access. (bucket-owner-read)'),
+    'bucket-owner-full-control' => t('Bucket owner has full control. (bucket-owner-full-control)'),
+  );
 }

@@ -30,7 +30,7 @@
 
       // POST to Drupal which will return the required paramaters for signing
       // a CORS request.
-      $.post('/ajax/amazons3_cors', postData, function(data) {
+      $.post(Drupal.settings.basePath + 'ajax/amazons3_cors', postData, function(data) {
         // Take the signed data and construct a form out of it.
         var fd = new FormData();
         $.each(data.inputs, function(key, value) {
@@ -77,7 +77,6 @@
           complete: function() {
             // Update the hidden fields to tell Drupal about the file that
             // was just uploaded.
-            $file.val(null);
             $file.parent().find('input[name$="[filemime]"]').val(f.type);
             $file.parent().find('input[name$="[filesize]"]').val(f.size);
             // Make sure and use the filename provided by Drupal as it may have
