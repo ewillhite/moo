@@ -1,6 +1,8 @@
-sites/all/modules/_custom/moo_projects/moo_projects.views_default.inc
-sites/all/modules/_custom/moo_team/moo_team.context.inc
-sites/all/themes/moo/assets/css/isotope.css
-sites/all/themes/moo/assets/scss/isotope.scss
-sites/all/themes/moo/template.php
-sites/all/themes/moo/templates/views-view--videos--block-3.tpl.php
+sites/all/modules/AmazonS3/AmazonS3StreamWrapper.inc
+sites/all/modules/AmazonS3/amazons3.info
+sites/all/modules/AmazonS3/amazons3.install
+sites/all/modules/AmazonS3/amazons3.module
+sites/all/modules/amazons3_cors/amazons3_cors.info
+sites/all/modules/amazons3_cors/amazons3_cors.js
+sites/all/modules/amazons3_cors/amazons3_cors.module
+sites/all/modules/amazons3_cors/test/amazons3_cors_test.info
