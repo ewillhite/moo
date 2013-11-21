@@ -77,6 +77,7 @@
           complete: function() {
             // Update the hidden fields to tell Drupal about the file that
             // was just uploaded.
+            $file.val(null);
             $file.parent().find('input[name$="[filemime]"]').val(f.type);
             $file.parent().find('input[name$="[filesize]"]').val(f.size);
             // Make sure and use the filename provided by Drupal as it may have
