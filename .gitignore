@@ -5,4 +5,4 @@ sites/*/settings*.php
 sites/*/files
 sites/*/private
 
-/sites/all/libraries/awssdk/config.inc.php
+sites/all/libraries/awssdk/config.inc.php
