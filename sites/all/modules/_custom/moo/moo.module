@@ -1,0 +1,23 @@
+<?php
+/**
+ * @file
+ * Module for defining random custom Seed Company hooks
+ */
+
+/**
+ * Implements hook_menu_contextual_links_alter().
+ */
+function moo_menu_contextual_links_alter(&$links, $router_item, $root_path) {
+  // if the Videos view
+  if ($links['views_ui-edit']['tab_parent_href'] == 'admin/structure/views/view/videos') {
+    $links['foo'] = array(
+      'title' => t('Sort Projects'),
+      'href' => 'admin/' . arg(1) . '/projects',
+      'localized_options' => array(
+        'query' => array(
+          'foo' => 'bar',
+        ),
+      ),
+    );
+  }
+}
